@@ -1,6 +1,7 @@
+
 # AESCrypt v2.0
 
-**AESCrypt v2.0** is a sophisticated tool designed for secure file and folder encryption and decryption. Utilizing state-of-the-art cryptographic methods, including Argon2 for password hashing and AES-256 for encryption, this application ensures robust protection for your sensitive data. This document provides a comprehensive guide on how to install, use, and troubleshoot AESCrypt v1.0.
+**AESCrypt v2.0** is a sophisticated tool designed for secure file and folder encryption and decryption. Utilizing state-of-the-art cryptographic methods, including Argon2 for password hashing and AES-256 for encryption, this application ensures robust protection for your sensitive data. This document provides a comprehensive guide on how to install, use, and troubleshoot AESCrypt v2.0.
 
 ![Screenshot](Scrn.png)
 
@@ -28,7 +29,7 @@
 
 ## Overview
 
-**AESCrypt v2.0** is a command-line and GUI-based tool designed for the encryption and decryption of files and folders. It leverages the Argon2 algorithm for secure password hashing and AES-256 for robust encryption. With a focus on security and ease of use, AESCrypt v1.0 provides a streamlined solution for protecting your sensitive information.
+**AESCrypt v2.0** is a command-line and GUI-based tool designed for the encryption and decryption of files and folders. It leverages the Argon2 algorithm for secure password hashing and AES-256 for robust encryption. With a focus on security and ease of use, AESCrypt v2.0 provides a streamlined solution for protecting your sensitive information.
 
 ## Features
 
@@ -53,7 +54,6 @@ To get the latest version of AESCrypt v2.0, you can clone the repository using G
 git clone https://github.com/victormeloasm/AESCrypt.git
 ```
 
-
 ### Installing Dependencies
 
 Navigate to the directory where `requirements.txt` is located and install the necessary Python packages using pip:
@@ -62,7 +62,7 @@ Navigate to the directory where `requirements.txt` is located and install the ne
 pip install -r requirements.txt
 ```
 
-This will install all the dependencies required for AESCrypt v1.0 to function correctly.
+This will install all the dependencies required for AESCrypt v2.0 to function correctly.
 
 ## Download
 
@@ -70,10 +70,9 @@ You can download the latest release of **AESCrypt v2.0** from the GitHub reposit
 
 - **Latest Release**: [Download Release](https://github.com/victormeloasm/AESCrypt/releases/tag/Abac)
 - **Executable File**: [Download AEScrypt_Windows_v2.0.zip](https://github.com/victormeloasm/AESCrypt/releases/download/Abac/AEScrypt_Windows_v2.0.zip)
-- **Linux .py File**: [Download AEScrypt_Linux_v2.0.zip](https://github.com/victormeloasm/AESCrypt/releases/download/Abac/AEScrypt_Windows_v2.0.zip))
+- **Linux .py File**: [Download AEScrypt_Linux_v2.0.zip](https://github.com/victormeloasm/AESCrypt/releases/download/Abac/AEScrypt_Linux_v2.0.zip)
 
 Please refer to the [Release Page](https://github.com/victormeloasm/AESCrypt/releases/tag/Crypt) for detailed information about the release.
-
 
 ## Usage
 
@@ -158,11 +157,10 @@ Contributions to AESCrypt v2.0 are welcome! If you have improvements, bug fixes,
 
 - **Interface Error Corrections:** Fixed issues with handling file and folder paths to ensure correct selection and processing.
 
-
 ## License
 
 This project is licensed under the MIT License. For more information, please review the [LICENSE](LICENSE) file included in this repository.
 
 ## Contact
 
-For any questions, issues, or support related to AESCrypt v1.0, please reach out to us at [victormeloasm@gmail.com](mailto:victormeloasm@gmail.com).
+For any questions, issues, or support related to AESCrypt v2.0, please reach out to us at [victormeloasm@gmail.com](mailto:victormeloasm@gmail.com).
