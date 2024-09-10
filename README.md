@@ -1,8 +1,8 @@
-# AESCrypt v1.0
+# AESCrypt v2.0
 
-**AESCrypt v1.0** is a sophisticated tool designed for secure file and folder encryption and decryption. Utilizing state-of-the-art cryptographic methods, including Argon2 for password hashing and AES-256 for encryption, this application ensures robust protection for your sensitive data. This document provides a comprehensive guide on how to install, use, and troubleshoot AESCrypt v1.0.
+**AESCrypt v2.0** is a sophisticated tool designed for secure file and folder encryption and decryption. Utilizing state-of-the-art cryptographic methods, including Argon2 for password hashing and AES-256 for encryption, this application ensures robust protection for your sensitive data. This document provides a comprehensive guide on how to install, use, and troubleshoot AESCrypt v1.0.
 
-![Screenshot](Screen.png)
+![Screenshot](Scrn.png)
 
 ## Table of Contents
 
@@ -28,7 +28,7 @@
 
 ## Overview
 
-**AESCrypt v1.0** is a command-line and GUI-based tool designed for the encryption and decryption of files and folders. It leverages the Argon2 algorithm for secure password hashing and AES-256 for robust encryption. With a focus on security and ease of use, AESCrypt v1.0 provides a streamlined solution for protecting your sensitive information.
+**AESCrypt v2.0** is a command-line and GUI-based tool designed for the encryption and decryption of files and folders. It leverages the Argon2 algorithm for secure password hashing and AES-256 for robust encryption. With a focus on security and ease of use, AESCrypt v1.0 provides a streamlined solution for protecting your sensitive information.
 
 ## Features
 
@@ -47,7 +47,7 @@
 
 ### Cloning the Repository
 
-To get the latest version of AESCrypt v1.0, you can clone the repository using Git:
+To get the latest version of AESCrypt v2.0, you can clone the repository using Git:
 
 ```bash
 git clone https://github.com/victormeloasm/AESCrypt.git
@@ -66,7 +66,7 @@ This will install all the dependencies required for AESCrypt v1.0 to function co
 
 ## Download
 
-You can download the latest release of **AESCrypt v1.0** from the GitHub repository. The release package includes the compiled executable and all necessary files.
+You can download the latest release of **AESCrypt v2.0** from the GitHub repository. The release package includes the compiled executable and all necessary files.
 
 - **Latest Release**: [Download Release](https://github.com/victormeloasm/AESCrypt/releases/tag/Crypt)
 - **Executable File**: [Download AEScrypt_Windows_v1.0.zip](https://github.com/victormeloasm/AESCrypt/releases/download/Crypt/AEScrypt_Windows_v2.0.zip)
@@ -79,7 +79,7 @@ Please refer to the [Release Page](https://github.com/victormeloasm/AESCrypt/rel
 
 ### Launching the Application
 
-To start AESCrypt v1.0:
+To start AESCrypt v2.0:
 
 - **If Using Python**: Execute the script directly:
   ```bash
@@ -89,7 +89,7 @@ To start AESCrypt v1.0:
 
 ### User Interface Overview
 
-The AESCrypt v1.0 interface is designed to be intuitive and user-friendly:
+The AESCrypt v2.0 interface is designed to be intuitive and user-friendly:
 
 - **File/Folder Path**: A text field and browse button to select files or folders for encryption or decryption.
 - **Password Entry**: A field to input or generate a strong password.
@@ -132,7 +132,7 @@ The AESCrypt v1.0 interface is designed to be intuitive and user-friendly:
 
 ## Contributing
 
-Contributions to AESCrypt v1.0 are welcome! If you have improvements, bug fixes, or new features to suggest, please follow these steps:
+Contributions to AESCrypt v2.0 are welcome! If you have improvements, bug fixes, or new features to suggest, please follow these steps:
 
 1. **Fork the Repository**: Create your own fork of the repository.
 2. **Create a Branch**: Work on your changes in a new branch.
