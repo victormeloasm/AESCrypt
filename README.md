@@ -50,7 +50,7 @@
 To get the latest version of AESCrypt v1.0, you can clone the repository using Git:
 
 ```bash
-git clone <[repository_url](https://github.com/victormeloasm/AESCrypt.git)>
+git clone https://github.com/victormeloasm/AESCrypt.git
 ```
 
 
