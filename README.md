@@ -69,7 +69,8 @@ This will install all the dependencies required for AESCrypt v1.0 to function co
 You can download the latest release of **AESCrypt v1.0** from the GitHub repository. The release package includes the compiled executable and all necessary files.
 
 - **Latest Release**: [Download Release](https://github.com/victormeloasm/AESCrypt/releases/tag/Crypt)
-- **Executable File**: [Download AESCrypt.zip](https://github.com/victormeloasm/AESCrypt/releases/download/Crypt/AEScrypt.zip)
+- **Executable File**: [Download AEScrypt_Windows_v1.0.zip](https://github.com/victormeloasm/AESCrypt/releases/download/Crypt/AEScrypt_Windows_v1.0.zip)
+- **Linux .py File**: [Download AEScrypt_Linux_v1.0.zip](https://github.com/victormeloasm/AESCrypt/releases/download/Crypt/AEScrypt_Linux_v1.0.zip)
 
 Please refer to the [Release Page](https://github.com/victormeloasm/AESCrypt/releases/tag/Crypt) for detailed information about the release.
 
