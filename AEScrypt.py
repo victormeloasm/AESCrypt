@@ -43,17 +43,14 @@ def encrypt_file(file_path, password):
     with open(encrypted_file_path, 'wb') as f:
         f.write(salt + iv + encrypted_data + hmac_value)
 
-    # Limpeza da senha da memória
     ctypes.memset(ctypes.cast(ctypes.create_string_buffer(password.encode()), ctypes.POINTER(ctypes.c_char)), 0, len(password))
 
 def decrypt_file(file_path, password):
     with open(file_path, 'rb') as f:
         salt = f.read(16)
         iv = f.read(16)
-
-        # Determinar o tamanho do HMAC
         file_size = os.path.getsize(file_path)
-        hmac_size = 32  # HMAC-SHA256 size
+        hmac_size = 32
         encrypted_data_size = file_size - 16 - 16 - hmac_size
         
         encrypted_data = f.read(encrypted_data_size)
@@ -61,7 +58,6 @@ def decrypt_file(file_path, password):
 
     key, _ = derive_key(password, salt)
 
-    # Verificação do HMAC
     h = hashes.Hash(hashes.SHA256(), backend=default_backend())
     h.update(encrypted_data)
     try:
@@ -82,7 +78,6 @@ def decrypt_file(file_path, password):
     with open(decrypted_file_path, 'wb') as f:
         f.write(data)
 
-    # Limpeza da senha da memória
     ctypes.memset(ctypes.cast(ctypes.create_string_buffer(password.encode()), ctypes.POINTER(ctypes.c_char)), 0, len(password))
 
 def encrypt_folder(folder_path, password):
