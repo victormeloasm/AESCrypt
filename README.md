@@ -69,8 +69,8 @@ This will install all the dependencies required for AESCrypt v1.0 to function co
 You can download the latest release of **AESCrypt v1.0** from the GitHub repository. The release package includes the compiled executable and all necessary files.
 
 - **Latest Release**: [Download Release](https://github.com/victormeloasm/AESCrypt/releases/tag/Crypt)
-- **Executable File**: [Download AEScrypt_Windows_v1.0.zip](https://github.com/victormeloasm/AESCrypt/releases/download/Crypt/AEScrypt_Windows_v1.0.zip)
-- **Linux .py File**: [Download AEScrypt_Linux_v1.0.zip](https://github.com/victormeloasm/AESCrypt/releases/download/Crypt/AEScrypt_Linux_v1.0.zip)
+- **Executable File**: [Download AEScrypt_Windows_v1.0.zip](https://github.com/victormeloasm/AESCrypt/releases/download/Crypt/AEScrypt_Windows_v2.0.zip)
+- **Linux .py File**: [Download AEScrypt_Linux_v1.0.zip](https://github.com/victormeloasm/AESCrypt/releases/download/Crypt/AEScrypt_Linux_v2.0.zip)
 
 Please refer to the [Release Page](https://github.com/victormeloasm/AESCrypt/releases/tag/Crypt) for detailed information about the release.
 
@@ -137,6 +137,27 @@ Contributions to AESCrypt v1.0 are welcome! If you have improvements, bug fixes,
 1. **Fork the Repository**: Create your own fork of the repository.
 2. **Create a Branch**: Work on your changes in a new branch.
 3. **Submit a Pull Request**: Share your changes with the community by submitting a pull request.
+
+## New Features in Version 2.0
+
+- **HMAC Verification Correction:** Addressed the issue with HMAC signature verification. The HMAC verification now correctly ensures the integrity of the data.
+
+- **Encryption and Decryption Adjustments:**
+  - Adjusted input formatting for the AES algorithm to handle padding and data correctly.
+  - Fixed "Invalid padding bytes" error during decryption to ensure proper padding processing.
+
+- **Memory Password Cleaning:** Implemented secure password cleaning from RAM using the `ctypes` library to minimize the risk of sensitive data exposure.
+
+- **Integrity Verification with Hashes:** Added SHA-256 hash-based integrity checks to ensure files are not corrupted during storage or transmission.
+
+- **Replay Attack Protection:** Added protection against replay attacks by using timestamps or sequence numbers.
+
+- **Strong Password Generation:** Improved password generation to ensure complexity and security.
+
+- **Enhanced User Interface:** Updated the graphical interface for better usability and clarity, including improved error and success messages.
+
+- **Interface Error Corrections:** Fixed issues with handling file and folder paths to ensure correct selection and processing.
+
 
 ## License
 
