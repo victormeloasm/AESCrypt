@@ -8,11 +8,11 @@ from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from argon2 import Type
 from argon2.low_level import hash_secret_raw
 import string
+import ctypes
 
 def derive_key(password, salt=None):
     if salt is None:
-        salt = secrets.token_bytes(16)  # Salt deve ser de 16 bytes
-    # Deriva a chave
+        salt = secrets.token_bytes(16)
     key = hash_secret_raw(
         password.encode(),
         salt,
@@ -20,7 +20,7 @@ def derive_key(password, salt=None):
         memory_cost=2**16,
         parallelism=1,
         hash_len=32,
-        type=Type.ID  # Argon2id
+        type=Type.ID
     )
     return key, salt
 
@@ -49,7 +49,7 @@ def encrypt_file(file_path, password):
 
 def decrypt_file(file_path, password):
     with open(file_path, 'rb') as f:
-        salt = f.read(16)  # Salt agora tem 16 bytes
+        salt = f.read(16)
         iv = f.read(16)
         encrypted_data_size = os.path.getsize(file_path) - 16 - 16 - 16 - 32
         encrypted_data = f.read(encrypted_data_size)
@@ -107,6 +107,10 @@ def generate_password():
     password_entry.delete(0, tk.END)
     password_entry.insert(0, password)
 
+def clear_memory(password_bytes):
+    length = len(password_bytes)
+    ctypes.memset(id(password_bytes), 0, length)
+
 def perform_action(action):
     password = password_entry.get()
     file_path = file_entry.get()
@@ -116,6 +120,7 @@ def perform_action(action):
     if not os.path.isabs(file_path):
         messagebox.showerror("File Error", "The file path must be absolute.")
         return
+    password_bytes = password.encode()
     try:
         if action == 'encrypt':
             if os.path.isdir(file_path):
@@ -130,6 +135,8 @@ def perform_action(action):
             messagebox.showerror("Action Error", "Invalid action. Use 'encrypt' or 'decrypt'.")
     except Exception as e:
         messagebox.showerror("Error", str(e))
+    finally:
+        clear_memory(password_bytes)
 
 def set_dark_theme():
     root.config(bg='#2e2e2e')
