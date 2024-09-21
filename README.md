@@ -71,11 +71,11 @@ This will install all the dependencies required for AESCrypt v3.5 Argon to funct
 
 You can download the latest release of **AESCrypt v3.5 Argon** from the GitHub repository. The release package includes the compiled executable and all necessary files.
 
-- **Latest Release**: [Download Release](https://github.com/victormeloasm/AESCrypt/releases/tag/AaA)
-- **Executable File**: [Download AEScrypt_Windows_v3.5_Argon.zip](https://github.com/victormeloasm/AESCrypt/releases/download/AaA/AEScrypt_Windows_v3.5_Argon.zip)
-- **Linux .py File**: [Download AEScrypt_Linux_v3.5_Argon.zip](https://github.com/victormeloasm/AESCrypt/releases/download/AaA/AEScrypt_Linux_v3.5_Argon.zip)
+- **Latest Release**: [Download Release](https://github.com/victormeloasm/AESCrypt/releases/tag/Argon)
+- **Executable File**: [Download AEScrypt_Windows_v3.5_Argon.zip](https://github.com/victormeloasm/AESCrypt/releases/download/Argon/AEScrypt_Windows_v3.5A.zip)
+- **Linux .py File**: [Download AEScrypt_Linux_v3.5_Argon.zip](https://github.com/victormeloasm/AESCrypt/releases/download/Argon/AEScrypt_Linux_v3.5A.zip)
 
-Please refer to the [Release Page](https://github.com/victormeloasm/AESCrypt/releases/tag/AaA) for detailed information about the release.
+Please refer to the [Release Page](https://github.com/victormeloasm/AESCrypt/releases/tag/Argon) for detailed information about the release.
 
 ## Usage
 
@@ -142,19 +142,41 @@ Contributions to AESCrypt v3.5 Argon are welcome! If you have improvements, bug 
 
 ## Security Module
 
-### Features
+## Features
 
-1. **File and Folder Encryption**
-2. **Argon2id Key Derivation**
-3. **Secure File Deletion**
-4. **Metadata Encryption**
-5. **HMAC for Data Integrity**
-6. **Automatic Password Generation**
-7. **Multiple Iterations of Argon2**
-8. **Salting**
-9. **Error Handling and Logging**
-10. **Cross-Platform Compatibility**
-11. **Security Best Practices Compliance**
+- **AES-256-GCM Encryption**: 
+  - Implements AES-256 in Galois/Counter Mode (GCM), providing both confidentiality and integrity. This mode ensures that encrypted data remains secure against unauthorized access while allowing for tamper detection.
+
+- **Key Derivation with Argon2id**:
+  - Utilizes Argon2id for password hashing, which is resistant to GPU attacks and side-channel attacks. Configurable parameters (time cost, memory cost, and parallelism) allow users to tailor security based on their needs.
+
+- **HMAC for Data Integrity**:
+  - Employs HMAC (Hash-based Message Authentication Code) to verify the integrity of encrypted data. During decryption, an HMAC is checked to confirm that the data has not been altered, protecting against tampering.
+
+- **Secure File Deletion**:
+  - Overwrites original files with random data before deletion, ensuring that sensitive information cannot be recovered using standard recovery techniques.
+
+- **Salting and Initialization Vectors**:
+  - Each encryption operation generates a unique salt and IV, ensuring that identical plaintexts do not result in identical ciphertexts. This enhances security by preventing pattern recognition in encrypted data.
+
+- **User-Generated Passwords**:
+  - Provides a password generation feature that creates strong, random passwords, helping users avoid weak passwords that are easily guessable.
+
+- **Batch Encryption**:
+  - Allows for the encryption of entire folders, simplifying the process of securing multiple files while maintaining robust individual file encryption standards.
+
+- **Error Handling and Logging**:
+  - Robust error handling mechanisms ensure that users are promptly informed of any issues during encryption or decryption processes, enabling swift troubleshooting.
+
+- **Metadata Encryption**:
+  - Protects sensitive file metadata, ensuring that file-related information is also secured alongside the content.
+
+- **Compliance with Security Best Practices**:
+  - Designed with adherence to industry best practices for cryptographic applications, ensuring a high level of security throughout the encryption and decryption processes.
+
+- **Cross-Platform Compatibility**:
+  - Functions seamlessly across various operating systems, allowing users to encrypt and decrypt files regardless of their platform.
+
 
 ## License
 
