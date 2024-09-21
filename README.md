@@ -1,7 +1,6 @@
+# AESCrypt v3.5 Argon
 
-# AESCrypt v3.0
-
-**AESCrypt v3.0** is a sophisticated tool designed for secure file and folder encryption and decryption. Utilizing state-of-the-art cryptographic methods, including Argon2 for password hashing and AES-256 for encryption, this application ensures robust protection for your sensitive data. This document provides a comprehensive guide on how to install, use, and troubleshoot AESCrypt v3.0.
+**AESCrypt v3.5 Argon** is a sophisticated tool designed for secure file and folder encryption and decryption. Utilizing state-of-the-art cryptographic methods, including Argon2 for password hashing and AES-256 for encryption, this application ensures robust protection for your sensitive data. This document provides a comprehensive guide on how to install, use, and troubleshoot AESCrypt v3.5 Argon.
 
 ![Screenshot](capture.png)
 
@@ -29,7 +28,7 @@
 
 ## Overview
 
-**AESCrypt v3.0** is a command-line and GUI-based tool designed for the encryption and decryption of files and folders. It leverages the Argon2 algorithm for secure password hashing and AES-256 for robust encryption. With a focus on security and ease of use, AESCrypt v2.0 provides a streamlined solution for protecting your sensitive information.
+**AESCrypt v3.5 Argon** is a command-line and GUI-based tool designed for the encryption and decryption of files and folders. It leverages the Argon2 algorithm for secure password hashing and AES-256 for robust encryption. With a focus on security and ease of use, AESCrypt v3.5 Argon provides a streamlined solution for protecting your sensitive information.
 
 ## Features
 
@@ -39,6 +38,10 @@
 - **Password Generation**: Generates strong, random passwords for enhanced security.
 - **User-Friendly GUI**: Modern, dark-themed graphical user interface for an intuitive user experience.
 - **No Console Window**: Operates without a console window, providing a clean and professional interface.
+- **Secure File Deletion**: Overwrites original files with random data before deletion to prevent unauthorized recovery.
+- **Metadata Encryption**: Protects sensitive file metadata from exposure.
+- **HMAC for Integrity**: Utilizes HMAC to verify data integrity during encryption and decryption.
+- **Cross-Platform Compatibility**: Works seamlessly across different operating systems.
 
 ## Installation
 
@@ -48,7 +51,7 @@
 
 ### Cloning the Repository
 
-To get the latest version of AESCrypt v3.0, you can clone the repository using Git:
+To get the latest version of AESCrypt v3.5 Argon, you can clone the repository using Git:
 
 ```bash
 git clone https://github.com/victormeloasm/AESCrypt.git
@@ -62,15 +65,15 @@ Navigate to the directory where `requirements.txt` is located and install the ne
 pip install -r requirements.txt
 ```
 
-This will install all the dependencies required for AESCrypt v3.0 to function correctly.
+This will install all the dependencies required for AESCrypt v3.5 Argon to function correctly.
 
 ## Download
 
-You can download the latest release of **AESCrypt v3.0** from the GitHub repository. The release package includes the compiled executable and all necessary files.
+You can download the latest release of **AESCrypt v3.5 Argon** from the GitHub repository. The release package includes the compiled executable and all necessary files.
 
 - **Latest Release**: [Download Release](https://github.com/victormeloasm/AESCrypt/releases/tag/AaA)
-- **Executable File**: [Download AEScrypt_Windows_v3.0.zip](https://github.com/victormeloasm/AESCrypt/releases/download/AaA/AEScrypt_Windows_v3.0.zip)
-- **Linux .py File**: [Download AEScrypt_Linux_v3.0.zip](https://github.com/victormeloasm/AESCrypt/releases/download/AaA/AEScrypt_Linux_v3.0.zip)
+- **Executable File**: [Download AEScrypt_Windows_v3.5_Argon.zip](https://github.com/victormeloasm/AESCrypt/releases/download/AaA/AEScrypt_Windows_v3.5_Argon.zip)
+- **Linux .py File**: [Download AEScrypt_Linux_v3.5_Argon.zip](https://github.com/victormeloasm/AESCrypt/releases/download/AaA/AEScrypt_Linux_v3.5_Argon.zip)
 
 Please refer to the [Release Page](https://github.com/victormeloasm/AESCrypt/releases/tag/AaA) for detailed information about the release.
 
@@ -78,7 +81,7 @@ Please refer to the [Release Page](https://github.com/victormeloasm/AESCrypt/rel
 
 ### Launching the Application
 
-To start AESCrypt v3.0:
+To start AESCrypt v3.5 Argon:
 
 - **If Using Python**: Execute the script directly:
   ```bash
@@ -88,7 +91,7 @@ To start AESCrypt v3.0:
 
 ### User Interface Overview
 
-The AESCrypt v3.0 interface is designed to be intuitive and user-friendly:
+The AESCrypt v3.5 Argon interface is designed to be intuitive and user-friendly:
 
 - **File/Folder Path**: A text field and browse button to select files or folders for encryption or decryption.
 - **Password Entry**: A field to input or generate a strong password.
@@ -131,61 +134,27 @@ The AESCrypt v3.0 interface is designed to be intuitive and user-friendly:
 
 ## Contributing
 
-Contributions to AESCrypt v3.0 are welcome! If you have improvements, bug fixes, or new features to suggest, please follow these steps:
+Contributions to AESCrypt v3.5 Argon are welcome! If you have improvements, bug fixes, or new features to suggest, please follow these steps:
 
 1. **Fork the Repository**: Create your own fork of the repository.
 2. **Create a Branch**: Work on your changes in a new branch.
 3. **Submit a Pull Request**: Share your changes with the community by submitting a pull request.
 
-## New Features in Version 3.0
+## Security Module
 
-- **HMAC Verification Correction:** Addressed the issue with HMAC signature verification. The HMAC verification now correctly ensures the integrity of the data.
+### Features
 
-- **Encryption and Decryption Adjustments:**
-  - Adjusted input formatting for the AES algorithm to handle padding and data correctly.
-  - Fixed "Invalid padding bytes" error during decryption to ensure proper padding processing.
-
-- **Memory Password Cleaning:** Implemented secure password cleaning from RAM using the `ctypes` library to minimize the risk of sensitive data exposure.
-
-- **Integrity Verification with Hashes:** Added SHA-256 hash-based integrity checks to ensure files are not corrupted during storage or transmission.
-
-- **Replay Attack Protection:** Added protection against replay attacks by using timestamps or sequence numbers.
-
-- **Strong Password Generation:** Improved password generation to ensure complexity and security.
-
-- **Enhanced User Interface:** Updated the graphical interface for better usability and clarity, including improved error and success messages.
-
-- **Interface Error Corrections:** Fixed issues with handling file and folder paths to ensure correct selection and processing.
-
-
-### AEScrypt v3.0 - Changelog
-
-**AEScrypt v3.0** introduces substantial security and performance enhancements while preserving the simplicity and functionality of the graphical user interface (GUI). This version focuses on providing robust and secure encryption for files and folders.
-
-
-#### New Features in Version 3.0
-
-1. **Switch to AES-256-GCM**:
-   - Replaced AES-CBC mode with **AES-256-GCM**, offering authenticated encryption with integrity (via a 16-byte GCM tag). GCM ensures data integrity without the need for a separate HMAC.
-
-2. **Increased PBKDF2 Iterations**:
-   - The number of iterations for the password-based key derivation function (PBKDF2) has been increased from 500,000 to **750,000**, providing stronger protection against brute-force attacks.
-
-3. **Increased Salt Size**:
-   - The salt size has been increased from 16 bytes to **32 bytes**, enhancing security by making precomputed attacks (rainbow tables) more difficult.
-
-4. **Sensitive Data Memory Cleansing**:
-   - Introduced the `clear_sensitive_data` function to securely overwrite sensitive data such as passwords, derived keys, and initialization vectors (IVs) in memory immediately after use.
-
-5. **Secure File Overwriting and Removal**:
-   - After encryption, original files are overwritten with random data and securely deleted, preventing unauthorized recovery of the original content from disk.
-
-6. **Password Generation with Secrets**:
-   - Passwords are now generated using Python's `secrets` module, ensuring that randomly generated passwords are cryptographically secure.
-
-7. **Improved Error Handling**:
-   - Enhanced validation of encrypted files, including checks for file truncation and the minimum size required for decryption, helping avoid processing corrupted or invalid files.
-
+1. **File and Folder Encryption**
+2. **Argon2id Key Derivation**
+3. **Secure File Deletion**
+4. **Metadata Encryption**
+5. **HMAC for Data Integrity**
+6. **Automatic Password Generation**
+7. **Multiple Iterations of Argon2**
+8. **Salting**
+9. **Error Handling and Logging**
+10. **Cross-Platform Compatibility**
+11. **Security Best Practices Compliance**
 
 ## License
 
@@ -193,4 +162,4 @@ This project is licensed under the MIT License. For more information, please rev
 
 ## Contact
 
-For any questions, issues, or support related to AESCrypt v2.0, please reach out to us at [victormeloasm@gmail.com](mailto:victormeloasm@gmail.com).
+For any questions, issues, or support related to AESCrypt v3.5 Argon, please reach out to us at [victormeloasm@gmail.com](mailto:victormeloasm@gmail.com).
