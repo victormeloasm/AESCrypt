@@ -2,7 +2,7 @@
 
 **AESCrypt v3.5 Argon** is a sophisticated tool designed for secure file and folder encryption and decryption. Utilizing state-of-the-art cryptographic methods, including Argon2 for password hashing and AES-256 for encryption, this application ensures robust protection for your sensitive data. This document provides a comprehensive guide on how to install, use, and troubleshoot AESCrypt v3.5 Argon.
 
-![Screenshot](capture.png)
+![Screenshot](capt.png)
 
 ## Table of Contents
 
