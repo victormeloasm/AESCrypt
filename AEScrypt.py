@@ -12,12 +12,12 @@ import tkinter.ttk as ttk
 
 def derive_key(password, salt=None):
     if salt is None:
-        salt = secrets.token_bytes(16)
+        salt = secrets.token_bytes(32)
     kdf = PBKDF2HMAC(
         algorithm=hashes.SHA256(),
         length=32,
         salt=salt,
-        iterations=500000,
+        iterations=750000,
         backend=default_backend()
     )
     key = kdf.derive(password.encode())
@@ -26,57 +26,46 @@ def derive_key(password, salt=None):
 def encrypt_file(file_path, password):
     key, salt = derive_key(password)
     iv = secrets.token_bytes(16)
-    cipher = Cipher(algorithms.AES(key), modes.CBC(iv), backend=default_backend())
+    cipher = Cipher(algorithms.AES(key), modes.GCM(iv), backend=default_backend())
     encryptor = cipher.encryptor()
 
     with open(file_path, 'rb') as f:
         data = f.read()
-        padder = padding.PKCS7(algorithms.AES.block_size).padder()
-        padded_data = padder.update(data) + padder.finalize()
+        padded_data = padding.PKCS7(algorithms.AES.block_size).padder().update(data) + padding.PKCS7(algorithms.AES.block_size).padder().finalize()
         encrypted_data = encryptor.update(padded_data) + encryptor.finalize()
-
-    h = hashes.Hash(hashes.SHA256(), backend=default_backend())
-    h.update(encrypted_data)
-    hmac_value = h.finalize()
+        tag = encryptor.tag
 
     encrypted_file_path = file_path + '.aes'
     with open(encrypted_file_path, 'wb') as f:
-        f.write(salt + iv + encrypted_data + hmac_value)
+        f.write(salt + iv + encrypted_data + tag)
+
+    try:
+        os.remove(file_path)
+    except Exception as e:
+        messagebox.showerror("Error", f"Failed to delete the original file: {str(e)}")
 
     ctypes.memset(ctypes.cast(ctypes.create_string_buffer(password.encode()), ctypes.POINTER(ctypes.c_char)), 0, len(password))
 
 def decrypt_file(file_path, password):
     with open(file_path, 'rb') as f:
-        salt = f.read(16)
+        salt = f.read(32)
         iv = f.read(16)
         file_size = os.path.getsize(file_path)
-        hmac_size = 32
-        encrypted_data_size = file_size - 16 - 16 - hmac_size
+        hmac_size = 16
+        encrypted_data_size = file_size - 32 - 16 - hmac_size
         
         encrypted_data = f.read(encrypted_data_size)
-        hmac_value = f.read(hmac_size)
+        tag = f.read(hmac_size)
 
     key, _ = derive_key(password, salt)
 
-    h = hashes.Hash(hashes.SHA256(), backend=default_backend())
-    h.update(encrypted_data)
-    try:
-        computed_hmac = h.finalize()
-        if computed_hmac != hmac_value:
-            raise ValueError("HMAC verification failed: Signature did not match digest.")
-    except Exception as e:
-        raise ValueError(f"HMAC verification failed: {e}")
-
-    cipher = Cipher(algorithms.AES(key), modes.CBC(iv), backend=default_backend())
+    cipher = Cipher(algorithms.AES(key), modes.GCM(iv, tag), backend=default_backend())
     decryptor = cipher.decryptor()
     decrypted_data = decryptor.update(encrypted_data) + decryptor.finalize()
 
-    unpadder = padding.PKCS7(algorithms.AES.block_size).unpadder()
-    data = unpadder.update(decrypted_data) + unpadder.finalize()
-
     decrypted_file_path = file_path.replace('.aes', '')
     with open(decrypted_file_path, 'wb') as f:
-        f.write(data)
+        f.write(decrypted_data)
 
     ctypes.memset(ctypes.cast(ctypes.create_string_buffer(password.encode()), ctypes.POINTER(ctypes.c_char)), 0, len(password))
 
@@ -145,12 +134,12 @@ def set_dark_theme():
     style.map('TButton', background=[('active', '#555')])
 
 root = tk.Tk()
-root.title("AEScrypt v2.0")
+root.title("AEScrypt v3.0")
 root.resizable(False, False)
 
 set_dark_theme()
 
-title_label = ttk.Label(root, text="AEScrypt v2.0", font=('Helvetica', 16, 'bold'))
+title_label = ttk.Label(root, text="AEScrypt v3.0", font=('Helvetica', 16, 'bold'))
 title_label.grid(row=0, column=0, columnspan=3, padx=10, pady=(10, 0))
 
 instructions_label = ttk.Label(root, text="1. Select a file or folder to encrypt or decrypt.\n"
