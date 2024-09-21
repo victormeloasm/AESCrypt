@@ -1,65 +1,68 @@
 import tkinter as tk
-from tkinter import filedialog, messagebox
+from tkinter import filedialog, messagebox, ttk
 import os
 import secrets
-import ctypes
+import hmac
+import hashlib
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
-from cryptography.hazmat.primitives import padding
-from cryptography.hazmat.primitives import hashes
-from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
-from cryptography.hazmat.backends import default_backend
-import tkinter.ttk as ttk
+from argon2 import Type
+from argon2.low_level import hash_secret_raw
+import string
 
 def derive_key(password, salt=None):
     if salt is None:
-        salt = secrets.token_bytes(32)
-    kdf = PBKDF2HMAC(
-        algorithm=hashes.SHA256(),
-        length=32,
-        salt=salt,
-        iterations=750000,
-        backend=default_backend()
+        salt = secrets.token_bytes(16)  # Salt deve ser de 16 bytes
+    # Deriva a chave
+    key = hash_secret_raw(
+        password.encode(),
+        salt,
+        time_cost=2,
+        memory_cost=2**16,
+        parallelism=1,
+        hash_len=32,
+        type=Type.ID  # Argon2id
     )
-    key = kdf.derive(password.encode())
     return key, salt
 
 def encrypt_file(file_path, password):
     key, salt = derive_key(password)
     iv = secrets.token_bytes(16)
-    cipher = Cipher(algorithms.AES(key), modes.GCM(iv), backend=default_backend())
-    encryptor = cipher.encryptor()
 
     with open(file_path, 'rb') as f:
         data = f.read()
-        padded_data = padding.PKCS7(algorithms.AES.block_size).padder().update(data) + padding.PKCS7(algorithms.AES.block_size).padder().finalize()
-        encrypted_data = encryptor.update(padded_data) + encryptor.finalize()
-        tag = encryptor.tag
+
+    cipher = Cipher(algorithms.AES(key), modes.GCM(iv), backend=None)
+    encryptor = cipher.encryptor()
+    encrypted_data = encryptor.update(data) + encryptor.finalize()
+    tag_data = encryptor.tag
+
+    hmac_value = hmac.new(key, encrypted_data, hashlib.sha256).digest()
 
     encrypted_file_path = file_path + '.aes'
     with open(encrypted_file_path, 'wb') as f:
-        f.write(salt + iv + encrypted_data + tag)
+        f.write(salt + iv + encrypted_data + tag_data + hmac_value)
 
     try:
-        os.remove(file_path)
+        secure_delete(file_path)
     except Exception as e:
         messagebox.showerror("Error", f"Failed to delete the original file: {str(e)}")
 
-    ctypes.memset(ctypes.cast(ctypes.create_string_buffer(password.encode()), ctypes.POINTER(ctypes.c_char)), 0, len(password))
-
 def decrypt_file(file_path, password):
     with open(file_path, 'rb') as f:
-        salt = f.read(32)
+        salt = f.read(16)  # Salt agora tem 16 bytes
         iv = f.read(16)
-        file_size = os.path.getsize(file_path)
-        hmac_size = 16
-        encrypted_data_size = file_size - 32 - 16 - hmac_size
-        
+        encrypted_data_size = os.path.getsize(file_path) - 16 - 16 - 16 - 32
         encrypted_data = f.read(encrypted_data_size)
-        tag = f.read(hmac_size)
+        tag_data = f.read(16)
+        hmac_value = f.read(32)
 
     key, _ = derive_key(password, salt)
 
-    cipher = Cipher(algorithms.AES(key), modes.GCM(iv, tag), backend=default_backend())
+    expected_hmac = hmac.new(key, encrypted_data, hashlib.sha256).digest()
+    if not hmac.compare_digest(hmac_value, expected_hmac):
+        raise ValueError("HMAC verification failed. The data may have been altered.")
+
+    cipher = Cipher(algorithms.AES(key), modes.GCM(iv, tag_data), backend=None)
     decryptor = cipher.decryptor()
     decrypted_data = decryptor.update(encrypted_data) + decryptor.finalize()
 
@@ -67,7 +70,12 @@ def decrypt_file(file_path, password):
     with open(decrypted_file_path, 'wb') as f:
         f.write(decrypted_data)
 
-    ctypes.memset(ctypes.cast(ctypes.create_string_buffer(password.encode()), ctypes.POINTER(ctypes.c_char)), 0, len(password))
+def secure_delete(file_path):
+    with open(file_path, 'r+b') as f:
+        length = os.path.getsize(file_path)
+        f.seek(0)
+        f.write(secrets.token_bytes(length))
+    os.remove(file_path)
 
 def encrypt_folder(folder_path, password):
     for root, dirs, files in os.walk(folder_path):
@@ -93,11 +101,9 @@ def browse_folder():
         file_entry.config(state='readonly')
 
 def generate_password():
-    import random
-    import string
     password_length = 32
     allowed_chars = string.ascii_letters + string.digits + "!@#$%&*()[]{},."
-    password = ''.join(random.choice(allowed_chars) for _ in range(password_length))
+    password = ''.join(secrets.choice(allowed_chars) for _ in range(password_length))
     password_entry.delete(0, tk.END)
     password_entry.insert(0, password)
 
@@ -134,12 +140,12 @@ def set_dark_theme():
     style.map('TButton', background=[('active', '#555')])
 
 root = tk.Tk()
-root.title("AEScrypt v3.0")
+root.title("AESCrypt v3.5 Argon")
 root.resizable(False, False)
 
 set_dark_theme()
 
-title_label = ttk.Label(root, text="AEScrypt v3.0", font=('Helvetica', 16, 'bold'))
+title_label = ttk.Label(root, text="AESCrypt v3.5 Argon", font=('Helvetica', 16, 'bold'))
 title_label.grid(row=0, column=0, columnspan=3, padx=10, pady=(10, 0))
 
 instructions_label = ttk.Label(root, text="1. Select a file or folder to encrypt or decrypt.\n"
