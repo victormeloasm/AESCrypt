@@ -69,8 +69,8 @@ This will install all the dependencies required for AESCrypt v3.0 to function co
 You can download the latest release of **AESCrypt v3.0** from the GitHub repository. The release package includes the compiled executable and all necessary files.
 
 - **Latest Release**: [Download Release](https://github.com/victormeloasm/AESCrypt/releases/tag/AaA)
-- **Executable File**: [Download AEScrypt_Windows_v3.0.zip](https://github.com/victormeloasm/AESCrypt/releases/download/Abac/AEScrypt_Windows_v3.0.zip)
-- **Linux .py File**: [Download AEScrypt_Linux_v3.0.zip](https://github.com/victormeloasm/AESCrypt/releases/download/Abac/AEScrypt_Linux_v3.0.zip)
+- **Executable File**: [Download AEScrypt_Windows_v3.0.zip](https://github.com/victormeloasm/AESCrypt/releases/download/AaA/AEScrypt_Windows_v3.0.zip)
+- **Linux .py File**: [Download AEScrypt_Linux_v3.0.zip](https://github.com/victormeloasm/AESCrypt/releases/download/AaA/AEScrypt_Linux_v3.0.zip)
 
 Please refer to the [Release Page](https://github.com/victormeloasm/AESCrypt/releases/tag/AaA) for detailed information about the release.
 
