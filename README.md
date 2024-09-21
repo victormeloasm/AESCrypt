@@ -177,6 +177,15 @@ Contributions to AESCrypt v3.5 Argon are welcome! If you have improvements, bug 
 - **Cross-Platform Compatibility**:
   - Functions seamlessly across various operating systems, allowing users to encrypt and decrypt files regardless of their platform.
 
+- **Secure Memory Clearing Feature**
+- In order to enhance security, AESCrypt 3.5 Argon implements a feature that ensures sensitive information, such as passwords, is securely cleared from memory after use. This helps prevent unauthorized access to sensitive data that may linger in memory.
+
+Implementation Details:
+Memory Clearing: After the encryption or decryption process, the password is converted into a byte array. This allows direct manipulation of the memory.
+
+Using ctypes: The ctypes library is utilized to access the memory address of the password byte array and overwrite it with zeros. This effectively removes the original password from memory.
+
+Functionality: The memory clearing function is called in the finally block of the perform_action function, ensuring that the memory is cleared regardless of whether the operation was successful or encountered an error.
 
 ## License
 
