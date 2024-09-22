@@ -1,0 +1,142 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    min-height: 100vh; /* Garante que o corpo ocupe pelo menos a altura da tela */
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2 {
+    text-align: center; /* Centraliza os títulos */
+}
+
+/* Estilo do Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    flex: 1; /* Faz o container ocupar o espaço disponível */
+}
+
+/* Header */
+header {
+    background-color: #1e1e1e;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    height: 160px; /* Limita a altura do cabeçalho */
+}
+
+.logo img {
+    height: 50px;
+}
+
+/* Navegação */
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffcc00;
+}
+
+/* Seções principais */
+section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.hero {
+    display: flex;
+    align-items: center; /* Alinha verticalmente no centro */
+    justify-content: center; /* Alinha horizontalmente no centro */
+    padding: 40px 20px; /* Ajuste o padding conforme necessário */
+    text-align: center; /* Centraliza o texto */
+}
+
+.hero-content h1 {
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    margin-bottom: 20px;
+}
+
+/* Botão "Get Started" */
+.cta-button {
+    background-color: #ffcc00; /* Cor de fundo do botão */
+    color: #1e1e1e; /* Cor do texto */
+    padding: 10px 20px; /* Padding para o botão */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem; /* Tamanho da fonte */
+    transition: all 0.3s ease; /* Transição suave */
+    box-shadow: 0 4px 15px rgba(255, 204, 0, 0.5); /* Sombra do botão */
+    display: inline-block; /* Garante que o botão se comporte como um bloco */
+    max-width: 300px; /* Limita a largura do botão */
+}
+
+.cta-button:hover {
+    background-color: #e6b800; /* Cor ao passar o mouse */
+    transform: translateY(-2px); /* Leve elevação ao passar o mouse */
+}
+
+/* Botões na seção de downloads */
+.button-grid {
+    display: flex;
+    flex-direction: column; /* Muda para coluna se quiser alinhamento vertical */
+    align-items: center; /* Centraliza os botões */
+    gap: 15px; /* Espaçamento entre os botões */
+}
+
+/* Footer */
+footer {
+    background-color: #1e1e1e;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    height: 60px; /* Altura fixa do rodapé */
+    margin-top: auto; /* Faz o rodapé ficar na parte inferior */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .button-grid {
+        flex-direction: column; /* Em dispositivos menores, mantém a coluna */
+    }
+}

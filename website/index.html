@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AESCrypt v3.5 Argon - Secure file encryption and decryption tool">
+    <meta name="keywords" content="AESCrypt, encryption, AES-256, Argon2, secure, file encryption">
+    <meta name="author" content="AESCrypt Development Team">
+    <title>AESCrypt v3.5 Argon</title>
+    <link rel="icon" href="Aescrypt.png" type="image/png"> <!-- Logo na aba do navegador -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="Aescrypt.png" alt="AESCrypt Logo">
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="getstarted.html">Get Started</a></li>
+                    <li><a href="documentation.html">Documentation</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>AESCrypt v3.5 Argon</h1>
+            <p>Secure your data with advanced encryption powered by AES-256 and Argon2.</p>
+            <a href="getstarted.html" class="cta-button">Get Started</a>
+        </div>
+    </div>
+</section>
+
+    <!-- Documentation Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Why AESCrypt?</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <i class="feature-icon">🔒</i>
+                    <h3>Strong Encryption</h3>
+                    <p>Uses AES-256 encryption to secure your files with industry-standard cryptographic techniques.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="feature-icon">⚙️</i>
+                    <h3>Simple Interface</h3>
+                    <p>Enjoy a clean, intuitive GUI that makes encryption and decryption simple and efficient.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="feature-icon">🌐</i>
+                    <h3>Cross-Platform</h3>
+                    <p>Works seamlessly across Windows, Mac, and Linux systems.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="feature-icon">🛡️</i>
+                    <h3>Metadata Protection</h3>
+                    <p>Ensure that even sensitive metadata is fully encrypted, keeping your files safe from prying eyes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 AESCrypt v3.5 Argon. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll animations for features
+        const featureItems = document.querySelectorAll('.feature-item');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                }
+            });
+        });
+
+        featureItems.forEach(item => {
+            observer.observe(item);
+        });
+    </script>
+</body>
+
+</html>
