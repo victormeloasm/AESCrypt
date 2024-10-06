@@ -1,11 +1,13 @@
-# AESCrypt v3.5 Argon
+Aqui está o README corrigido com a menção ao Argon2id em vez de PBKDF2:
 
-**AESCrypt v3.5 Argon** is a sophisticated tool designed for secure file and folder encryption and decryption. Utilizing state-of-the-art cryptographic methods, including Argon2 for password hashing and AES-256 for encryption, this application ensures robust protection for your sensitive data. This document provides a comprehensive guide on how to install, use, and troubleshoot AESCrypt v3.5 Argon.
+```markdown
+# AESCrypt 4.0 Argon
 
-![Screenshot](capt.png)
+**AESCrypt 4.0 Argon** is a sophisticated tool designed for secure file and folder encryption and decryption. Utilizing state-of-the-art cryptographic methods, including Argon2id for password hashing and AES-256 for encryption, this application ensures robust protection for your sensitive data. This document provides a comprehensive guide on how to install, use, and troubleshoot AESCrypt 4.0 Argon.
 
+![Screenshot](scri.png)
 
-https://aescrypt-argon.netlify.app/
+[Visit the AESCrypt Website](https://aescrypt-argon.netlify.app/)
 
 ## Table of Contents
 
@@ -15,29 +17,31 @@ https://aescrypt-argon.netlify.app/
    - [Prerequisites](#prerequisites)
    - [Cloning the Repository](#cloning-the-repository)
    - [Installing Dependencies](#installing-dependencies)
-4. [Usage](#usage)
+4. [Download](#download)
+5. [Usage](#usage)
    - [Launching the Application](#launching-the-application)
    - [User Interface Overview](#user-interface-overview)
    - [Encrypting Files](#encrypting-files)
    - [Decrypting Files](#decrypting-files)
    - [Encrypting Folders](#encrypting-folders)
-5. [Troubleshooting](#troubleshooting)
+6. [Troubleshooting](#troubleshooting)
    - [Common Issues](#common-issues)
    - [Error Messages](#error-messages)
-6. [Security Considerations](#security-considerations)
-7. [Contributing](#contributing)
-8. [License](#license)
-9. [Contact](#contact)
+7. [Security Considerations](#security-considerations)
+8. [Contributing](#contributing)
+9. [License](#license)
+10. [Contact](#contact)
 
 ## Overview
 
-**AESCrypt v3.5 Argon** is a command-line and GUI-based tool designed for the encryption and decryption of files and folders. It leverages the Argon2 algorithm for secure password hashing and AES-256 for robust encryption. With a focus on security and ease of use, AESCrypt v3.5 Argon provides a streamlined solution for protecting your sensitive information.
+**AESCrypt 4.0 Argon** is a command-line and GUI-based tool designed for the encryption and decryption of files and folders. It leverages the Argon2id algorithm for secure password hashing and AES-256 for robust encryption. With a focus on security and ease of use, AESCrypt 4.0 Argon provides a streamlined solution for protecting your sensitive information.
 
 ## Features
 
 - **File Encryption**: Encrypts individual files with AES-256 encryption using a secure, hashed password.
 - **File Decryption**: Decrypts files previously encrypted with AESCrypt.
 - **Batch Encryption**: Encrypts all files within a selected folder, simplifying bulk encryption tasks.
+- **Random Byte Padding**: Automatically adds at least 1MB of random bytes to the encrypted files, disguising their actual size for enhanced security.
 - **Password Generation**: Generates strong, random passwords for enhanced security.
 - **User-Friendly GUI**: Modern, dark-themed graphical user interface for an intuitive user experience.
 - **No Console Window**: Operates without a console window, providing a clean and professional interface.
@@ -54,7 +58,7 @@ https://aescrypt-argon.netlify.app/
 
 ### Cloning the Repository
 
-To get the latest version of AESCrypt v3.5 Argon, you can clone the repository using Git:
+To get the latest version of AESCrypt 4.0 Argon, you can clone the repository using Git:
 
 ```bash
 git clone https://github.com/victormeloasm/AESCrypt.git
@@ -68,23 +72,21 @@ Navigate to the directory where `requirements.txt` is located and install the ne
 pip install -r requirements.txt
 ```
 
-This will install all the dependencies required for AESCrypt v3.5 Argon to function correctly.
+This will install all the dependencies required for AESCrypt 4.0 Argon to function correctly.
 
 ## Download
 
-You can download the latest release of **AESCrypt v3.5 Argon** from the GitHub repository. The release package includes the compiled executable and all necessary files.
+You can download the latest release of **AESCrypt 4.0 Argon** from the GitHub repository. The release package includes the compiled executable and all necessary files.
 
-- **Latest Release**: [Download Release](https://github.com/victormeloasm/AESCrypt/releases/tag/Argon)
-- **Executable File**: [Download AEScrypt_Windows_v3.5_Argon.zip](https://github.com/victormeloasm/AESCrypt/releases/download/Argon/AEScrypt_Windows_v3.5A.zip)
-- **Linux .py File**: [Download AEScrypt_Linux_v3.5_Argon.zip](https://github.com/victormeloasm/AESCrypt/releases/download/Argon/AEScrypt_Linux_v3.5A.zip)
-
-Please refer to the [Release Page](https://github.com/victormeloasm/AESCrypt/releases/tag/Argon) for detailed information about the release.
+- **Release Page:** [AESCrypt v4.0 Argon Release](https://github.com/victormeloasm/AESCrypt/releases/tag/ArgonP)
+- **Download for Windows:** [AESCrypt Windows v4.0A](https://github.com/victormeloasm/AESCrypt/releases/download/ArgonP/AEScrypt_Windows_v4.0A.zip)
+- **Download for Linux:** [AESCrypt Linux v4.0A](https://github.com/victormeloasm/AESCrypt/releases/download/ArgonP/AEScrypt_Linux_v4.0A.zip)
 
 ## Usage
 
 ### Launching the Application
 
-To start AESCrypt v3.5 Argon:
+To start AESCrypt 4.0 Argon:
 
 - **If Using Python**: Execute the script directly:
   ```bash
@@ -94,7 +96,7 @@ To start AESCrypt v3.5 Argon:
 
 ### User Interface Overview
 
-The AESCrypt v3.5 Argon interface is designed to be intuitive and user-friendly:
+The AESCrypt 4.0 Argon interface is designed to be intuitive and user-friendly:
 
 - **File/Folder Path**: A text field and browse button to select files or folders for encryption or decryption.
 - **Password Entry**: A field to input or generate a strong password.
@@ -137,58 +139,11 @@ The AESCrypt v3.5 Argon interface is designed to be intuitive and user-friendly:
 
 ## Contributing
 
-Contributions to AESCrypt v3.5 Argon are welcome! If you have improvements, bug fixes, or new features to suggest, please follow these steps:
+Contributions to AESCrypt 4.0 Argon are welcome! If you have improvements, bug fixes, or new features to suggest, please follow these steps:
 
 1. **Fork the Repository**: Create your own fork of the repository.
 2. **Create a Branch**: Work on your changes in a new branch.
 3. **Submit a Pull Request**: Share your changes with the community by submitting a pull request.
-
-## Security Module
-
-## Features
-
-- **AES-256-GCM Encryption**: 
-  - Implements AES-256 in Galois/Counter Mode (GCM), providing both confidentiality and integrity. This mode ensures that encrypted data remains secure against unauthorized access while allowing for tamper detection.
-
-- **Key Derivation with Argon2id**:
-  - Utilizes Argon2id for password hashing, which is resistant to GPU attacks and side-channel attacks. Configurable parameters (time cost, memory cost, and parallelism) allow users to tailor security based on their needs.
-
-- **HMAC for Data Integrity**:
-  - Employs HMAC (Hash-based Message Authentication Code) to verify the integrity of encrypted data. During decryption, an HMAC is checked to confirm that the data has not been altered, protecting against tampering.
-
-- **Secure File Deletion**:
-  - Overwrites original files with random data before deletion, ensuring that sensitive information cannot be recovered using standard recovery techniques.
-
-- **Salting and Initialization Vectors**:
-  - Each encryption operation generates a unique salt and IV, ensuring that identical plaintexts do not result in identical ciphertexts. This enhances security by preventing pattern recognition in encrypted data.
-
-- **User-Generated Passwords**:
-  - Provides a password generation feature that creates strong, random passwords, helping users avoid weak passwords that are easily guessable.
-
-- **Batch Encryption**:
-  - Allows for the encryption of entire folders, simplifying the process of securing multiple files while maintaining robust individual file encryption standards.
-
-- **Error Handling and Logging**:
-  - Robust error handling mechanisms ensure that users are promptly informed of any issues during encryption or decryption processes, enabling swift troubleshooting.
-
-- **Metadata Encryption**:
-  - Protects sensitive file metadata, ensuring that file-related information is also secured alongside the content.
-
-- **Compliance with Security Best Practices**:
-  - Designed with adherence to industry best practices for cryptographic applications, ensuring a high level of security throughout the encryption and decryption processes.
-
-- **Cross-Platform Compatibility**:
-  - Functions seamlessly across various operating systems, allowing users to encrypt and decrypt files regardless of their platform.
-
-- **Secure Memory Clearing Feature**
-- In order to enhance security, AESCrypt 3.5 Argon implements a feature that ensures sensitive information, such as passwords, is securely cleared from memory after use. This helps prevent unauthorized access to sensitive data that may linger in memory.
-
-Implementation Details:
-Memory Clearing: After the encryption or decryption process, the password is converted into a byte array. This allows direct manipulation of the memory.
-
-Using ctypes: The ctypes library is utilized to access the memory address of the password byte array and overwrite it with zeros. This effectively removes the original password from memory.
-
-Functionality: The memory clearing function is called in the finally block of the perform_action function, ensuring that the memory is cleared regardless of whether the operation was successful or encountered an error.
 
 ## License
 
@@ -196,4 +151,7 @@ This project is licensed under the MIT License. For more information, please rev
 
 ## Contact
 
-For any questions, issues, or support related to AESCrypt v3.5 Argon, please reach out to us at [victormeloasm@gmail.com](mailto:victormeloasm@gmail.com).
+For any questions, issues, or support related to AESCrypt 4.0 Argon, please reach out to us at [victormeloasm@gmail.com](mailto:victormeloasm@gmail.com).
+```
+
+Sinta-se à vontade para fazer mais ajustes ou adicionar qualquer outra informação que precisar!
