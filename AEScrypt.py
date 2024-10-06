@@ -31,16 +31,23 @@ def encrypt_file(file_path, password):
     with open(file_path, 'rb') as f:
         data = f.read()
 
+    file_size = len(data)
+    min_padding = max(1048576 - file_size, 0)  # Garantindo pelo menos 1MB de diferença
+    random_bytes_count = secrets.randbelow(256) + 1
+    total_padding = min_padding + random_bytes_count
+    random_padding = secrets.token_bytes(total_padding)
+    data_padded = data + random_padding
+
     cipher = Cipher(algorithms.AES(key), modes.GCM(iv), backend=None)
     encryptor = cipher.encryptor()
-    encrypted_data = encryptor.update(data) + encryptor.finalize()
+    encrypted_data = encryptor.update(data_padded) + encryptor.finalize()
     tag_data = encryptor.tag
 
     hmac_value = hmac.new(key, encrypted_data, hashlib.sha256).digest()
 
     encrypted_file_path = file_path + '.aes'
     with open(encrypted_file_path, 'wb') as f:
-        f.write(salt + iv + encrypted_data + tag_data + hmac_value)
+        f.write(salt + iv + total_padding.to_bytes(4, 'big') + encrypted_data + tag_data + hmac_value)
 
     try:
         secure_delete(file_path)
@@ -51,7 +58,8 @@ def decrypt_file(file_path, password):
     with open(file_path, 'rb') as f:
         salt = f.read(16)
         iv = f.read(16)
-        encrypted_data_size = os.path.getsize(file_path) - 16 - 16 - 16 - 32
+        total_padding = int.from_bytes(f.read(4), 'big')
+        encrypted_data_size = os.path.getsize(file_path) - 16 - 16 - 4 - 16 - 32
         encrypted_data = f.read(encrypted_data_size)
         tag_data = f.read(16)
         hmac_value = f.read(32)
@@ -65,6 +73,8 @@ def decrypt_file(file_path, password):
     cipher = Cipher(algorithms.AES(key), modes.GCM(iv, tag_data), backend=None)
     decryptor = cipher.decryptor()
     decrypted_data = decryptor.update(encrypted_data) + decryptor.finalize()
+
+    decrypted_data = decrypted_data[:-total_padding]
 
     decrypted_file_path = file_path.replace('.aes', '')
     with open(decrypted_file_path, 'wb') as f:
@@ -147,12 +157,12 @@ def set_dark_theme():
     style.map('TButton', background=[('active', '#555')])
 
 root = tk.Tk()
-root.title("AESCrypt v3.5 Argon")
+root.title("AESCrypt v4.0 Argon")
 root.resizable(False, False)
 
 set_dark_theme()
 
-title_label = ttk.Label(root, text="AESCrypt v3.5 Argon", font=('Helvetica', 16, 'bold'))
+title_label = ttk.Label(root, text="AESCrypt v4.0 Argon", font=('Helvetica', 16, 'bold'))
 title_label.grid(row=0, column=0, columnspan=3, padx=10, pady=(10, 0))
 
 instructions_label = ttk.Label(root, text="1. Select a file or folder to encrypt or decrypt.\n"
