@@ -3,30 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documentation - AESCrypt v3.5 Argon</title>
+    <title>Documentation - AESCrypt v4.0 Argon</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="Aescrypt.png">
     <style>
-        /* Estilo para links de navegação */
+        /* Style for navigation links */
         .nav-links a {
-            color: black; /* Altera a cor dos links para preto */
-            text-decoration: none; /* Remove o sublinhado */
+            color: black; /* Change link color to black */
+            text-decoration: none; /* Remove underline */
         }
         .nav-links a:hover {
-            text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+            text-decoration: underline; /* Add underline on hover */
         }
 
-        /* Centraliza a imagem */
+        /* Center the image */
         img {
-            display: block; /* Garante que a imagem seja tratada como um bloco */
-            margin: 20px auto; /* Centraliza a imagem com margens automáticas */
+            display: block; /* Ensure the image is treated as a block */
+            margin: 20px auto; /* Center the image with auto margins */
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>AESCrypt v3.5 Argon</h1>
+            <h1>AESCrypt v4.0 Argon</h1>
         </div>
     </header>
     
@@ -47,8 +47,8 @@
         <section id="overview">
             <h2>Overview</h2>
             <p>
-                AESCrypt v3.5 Argon is a sophisticated file and folder encryption application designed for secure data protection. 
-                Utilizing advanced cryptographic methods, it implements Argon2 for password hashing and AES-256 for encryption, ensuring the highest levels of security for sensitive information.
+                AESCrypt v4.0 Argon is a sophisticated file and folder encryption application designed for secure data protection. 
+                Utilizing advanced cryptographic methods, it implements Argon2 for password hashing and AES-256-GCM for encryption, ensuring the highest levels of security for sensitive information.
                 This document provides a detailed exploration of the program's structure, functionalities, and underlying security mechanisms.
             </p>
             <img src="capt.png" alt="AESCrypt Screenshot">
@@ -57,20 +57,22 @@
         <section id="features">
             <h2>Features</h2>
             <ul>
-                <li><strong>File Encryption:</strong> Encrypts individual files using AES-256, ensuring that data is unreadable without the correct password.</li>
-                <li><strong>File Decryption:</strong> Allows users to decrypt previously encrypted files, restoring original data from the encrypted format.</li>
-                <li><strong>Batch Encryption:</strong> Facilitates the encryption of all files within a selected folder, streamlining the process of securing multiple documents at once.</li>
-                <li><strong>Password Generation:</strong> Offers a feature to generate strong, random passwords, enhancing security by preventing weak password choices.</li>
-                <li><strong>User-Friendly GUI:</strong> Features a modern, dark-themed graphical user interface, making navigation intuitive and accessible.</li>
-                <li><strong>Secure File Deletion:</strong> Implements a secure deletion method that overwrites original files before removal, preventing unauthorized data recovery.</li>
-                <li><strong>HMAC for Integrity:</strong> Uses HMAC (Hash-based Message Authentication Code) to ensure that the data integrity is maintained during encryption and decryption processes.</li>
-                <li><strong>Cross-Platform Compatibility:</strong> Functions seamlessly on various operating systems, allowing users from different environments to utilize AESCrypt without issues.</li>
+                <li><strong>AES-256-GCM Encryption:</strong> Provides confidentiality and data integrity with secure encryption and tamper detection.</li>
+                <li><strong>Password Hashing with Argon2id:</strong> Utilizes Argon2id for robust password security, resistant to modern attacks.</li>
+                <li><strong>Secure File Deletion:</strong> Implements secure deletion by overwriting original files before removal, preventing unauthorized recovery.</li>
+                <li><strong>Metadata Encryption:</strong> Protects file-related information from exposure.</li>
+                <li><strong>Batch Encryption:</strong> Encrypts all files within a folder with just a few clicks.</li>
+                <li><strong>Cross-Platform Compatibility:</strong> Available for both Windows and Linux users.</li>
+                <li><strong>User-Friendly GUI:</strong> Features a modern interface with a dark theme for enhanced user experience.</li>
+                <li><strong>Automatic Password Generation:</strong> Offers a feature to generate strong, random passwords, enhancing security by preventing weak password choices.</li>
+                <li><strong>Random Byte Addition:</strong> Adds random bytes to disguise file sizes, improving data privacy.</li>
+                <li><strong>Memory Management Improvements:</strong> Cleans sensitive data from memory after use, reducing the risk of data leakage.</li>
             </ul>
         </section>
 
         <section id="installation">
             <h2>Installation</h2>
-            <p>To install AESCrypt v3.5 Argon, follow these steps:</p>
+            <p>To install AESCrypt v4.0 Argon, follow these steps:</p>
             <h3>Prerequisites</h3>
             <p>Ensure you have Python installed on your system. Download it from <a href="https://www.python.org/downloads/">python.org</a>.</p>
 
@@ -85,7 +87,7 @@
 
         <section id="usage">
             <h2>Usage</h2>
-            <p>To start using AESCrypt v3.5 Argon:</p>
+            <p>To start using AESCrypt v4.0 Argon:</p>
             <h3>Launching the Application</h3>
             <p>You can run the application by executing the script in a terminal:</p>
             <pre><code>python AESCrypt.py</code></pre>
@@ -123,7 +125,7 @@
 
         <section id="security">
             <h2>Security Considerations</h2>
-            <p>Security is a critical component of AESCrypt v3.5 Argon. Key considerations include:</p>
+            <p>Security is a critical component of AESCrypt v4.0 Argon. Key considerations include:</p>
             <ul>
                 <li><strong>Strong Passwords:</strong> Users are encouraged to create strong and unique passwords for encryption to mitigate the risk of unauthorized access.</li>
                 <li><strong>Secure Memory Management:</strong> The application is designed to clear sensitive data from memory post-use, reducing the risk of data leakage.</li>
