@@ -1,6 +1,6 @@
-# AESCrypt 4.5 Argon
+# AESCrypt 4.5.1 Argon
 
-**AESCrypt 4.5 Argon** is a sophisticated tool designed for secure file and folder encryption and decryption. Utilizing state-of-the-art cryptographic methods, including Argon2 for password hashing and AES-256 for encryption, this application ensures robust protection for your sensitive data. This document provides a comprehensive guide on how to install, use, and troubleshoot AESCrypt 4.5 Argon.
+**AESCrypt 4.5.1 Argon** is a sophisticated tool designed for secure file and folder encryption and decryption. Utilizing state-of-the-art cryptographic methods, including Argon2 for password hashing and AES-256 for encryption, this application ensures robust protection for your sensitive data. This document provides a comprehensive guide on how to install, use, and troubleshoot AESCrypt 4.5.1 Argon.
 
 ![Screenshot](capcap.png)
 
@@ -31,7 +31,7 @@
 
 ## Overview
 
-**AESCrypt 4.5 Argon** is a command-line and GUI-based tool designed for the encryption and decryption of files and folders. It leverages the Argon2 algorithm for secure password hashing and AES-256 for robust encryption. With a focus on security and ease of use, AESCrypt 4.5 Argon provides a streamlined solution for protecting your sensitive information.
+**AESCrypt 4.5.1 Argon** is a command-line and GUI-based tool designed for the encryption and decryption of files and folders. It leverages the Argon2 algorithm for secure password hashing and AES-256 for robust encryption. With a focus on security and ease of use, AESCrypt 4.5 Argon provides a streamlined solution for protecting your sensitive information.
 
 ## Features
 
@@ -60,7 +60,7 @@
 
 ### Cloning the Repository
 
-To get the latest version of AESCrypt 4.5 Argon, you can clone the repository using Git:
+To get the latest version of AESCrypt 4.5.1 Argon, you can clone the repository using Git:
 
 ```bash
 git clone https://github.com/victormeloasm/AESCrypt.git
@@ -74,11 +74,11 @@ Navigate to the directory where `requirements.txt` is located and install the ne
 pip install -r requirements.txt
 ```
 
-This will install all the dependencies required for AESCrypt 4.5 Argon to function correctly.
+This will install all the dependencies required for AESCrypt 4.5.1 Argon to function correctly.
 
 ## Download
 
-You can download the latest release of **AESCrypt 4.5 Argon** from the GitHub repository. The release package includes the compiled executable and all necessary files.
+You can download the latest release of **AESCrypt 4.5.1 Argon** from the GitHub repository. The release package includes the compiled executable and all necessary files.
 
 - **Release Page:** [AESCrypt v4.5 Argon Release](https://github.com/victormeloasm/AESCrypt/releases/tag/ArgonB)
 - **Download for Windows:** [AESCrypt Windows v4.5.1A](https://github.com/victormeloasm/AESCrypt/releases/download/ArgonB/AEScrypt_Windows_v4.5.1A.zip)
@@ -88,7 +88,7 @@ You can download the latest release of **AESCrypt 4.5 Argon** from the GitHub re
 
 ### Launching the Application
 
-To start AESCrypt 4.5 Argon:
+To start AESCrypt 4.5.1 Argon:
 
 - **If Using Python**: Execute the script directly:
   ```bash
@@ -99,7 +99,7 @@ To start AESCrypt 4.5 Argon:
 
 ### User Interface Overview
 
-The AESCrypt 4.5 Argon interface is designed to be intuitive and user-friendly:
+The AESCrypt 4.5.1 Argon interface is designed to be intuitive and user-friendly:
 
 - **File/Folder Path**: A text field and browse button to select files or folders for encryption or decryption.
 - **Password Entry**: A field to input or generate a strong password.
@@ -142,7 +142,7 @@ The AESCrypt 4.5 Argon interface is designed to be intuitive and user-friendly:
 
 ## Contributing
 
-Contributions to AESCrypt 4.5 Argon are welcome! If you have improvements, bug fixes, or new features to suggest, please follow these steps:
+Contributions to AESCrypt 4.5.1 Argon are welcome! If you have improvements, bug fixes, or new features to suggest, please follow these steps:
 
 1. **Fork the Repository**: Create your own fork of the repository.
 2. **Create a Branch**: Work on your changes in a new branch.
