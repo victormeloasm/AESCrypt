@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documentation - AESCrypt v4.5 Argon</title>
+    <title>Documentation - AESCrypt Argon 4.5.1</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="Aescrypt.png">
     <style>
@@ -21,12 +21,31 @@
             display: block; /* Ensure the image is treated as a block */
             margin: 20px auto; /* Center the image with auto margins */
         }
+
+        /* Home button style */
+        #back-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .cta-button {
+            background-color: #007BFF; /* Blue background */
+            color: white; /* White text */
+            padding: 10px 20px; /* Padding for the button */
+            border-radius: 5px; /* Rounded corners */
+            text-decoration: none; /* Remove underline */
+            font-weight: bold;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>AESCrypt v4.5 Argon</h1>
+            <h1>AESCrypt Argon 4.5.1</h1>
         </div>
     </header>
     
@@ -47,11 +66,11 @@
         <section id="overview">
             <h2>Overview</h2>
             <p>
-                AESCrypt v4.5 Argon is a sophisticated file and folder encryption application designed for secure data protection. 
+                AESCrypt Argon 4.5.1 is a sophisticated file and folder encryption application designed for secure data protection.
                 Utilizing advanced cryptographic methods, it implements Argon2 for password hashing and AES-256-GCM for encryption, ensuring the highest levels of security for sensitive information.
                 This document provides a detailed exploration of the program's structure, functionalities, and underlying security mechanisms.
             </p>
-            <img src="capts.png" alt="AESCrypt Screenshot"> <!-- Atualização da imagem -->
+            <img src="capts.png" alt="AESCrypt Screenshot"> <!-- Updated image -->
         </section>
 
         <section id="features">
@@ -74,7 +93,7 @@
 
         <section id="installation">
             <h2>Installation</h2>
-            <p>To install AESCrypt v4.5 Argon, follow these steps:</p>
+            <p>To install AESCrypt Argon 4.5.1, follow these steps:</p>
             <h3>Prerequisites</h3>
             <p>Ensure you have Python installed on your system. Download it from <a href="https://www.python.org/downloads/">python.org</a>.</p>
 
@@ -89,7 +108,7 @@
 
         <section id="usage">
             <h2>Usage</h2>
-            <p>To start using AESCrypt v4.5 Argon:</p>
+            <p>To start using AESCrypt Argon 4.5.1:</p>
             <h3>Launching the Application</h3>
             <p>You can run the application by executing the script in a terminal:</p>
             <pre><code>python AESCrypt.py</code></pre>
@@ -127,7 +146,7 @@
 
         <section id="security">
             <h2>Security Considerations</h2>
-            <p>Security is a critical component of AESCrypt v4.5 Argon. Key considerations include:</p>
+            <p>Security is a critical component of AESCrypt Argon 4.5.1. Key considerations include:</p>
             <ul>
                 <li><strong>Strong Passwords:</strong> Users are encouraged to create strong and unique passwords for encryption to mitigate the risk of unauthorized access.</li>
                 <li><strong>Secure Memory Management:</strong> The application is designed to clear sensitive data from memory post-use, reducing the risk of data leakage.</li>
@@ -145,7 +164,9 @@
     <footer>
         <p>&copy; 2024 AESCrypt Team. All rights reserved.</p>
     </footer>
-    <section id="back-link" style="text-align: center; margin-top: 20px;">
+
+    <!-- Back to Home Button -->
+    <section id="back-link">
         <a href="index.html" class="cta-button">Back to Home</a>
     </section>
 </body>
