@@ -2,7 +2,7 @@
 
 **AESCrypt 4.5 Argon** is a sophisticated tool designed for secure file and folder encryption and decryption. Utilizing state-of-the-art cryptographic methods, including Argon2 for password hashing and AES-256 for encryption, this application ensures robust protection for your sensitive data. This document provides a comprehensive guide on how to install, use, and troubleshoot AESCrypt 4.5 Argon.
 
-![Screenshot](capts.png)
+![Screenshot](capcap.png)
 
 [Visit the AESCrypt Website](https://aescrypt-argon.netlify.app/)
 
@@ -80,9 +80,9 @@ This will install all the dependencies required for AESCrypt 4.5 Argon to functi
 
 You can download the latest release of **AESCrypt 4.5 Argon** from the GitHub repository. The release package includes the compiled executable and all necessary files.
 
-- **Release Page:** [AESCrypt v4.5 Argon Release](https://github.com/victormeloasm/AESCrypt/releases/tag/ArgonC)
-- **Download for Windows:** [AESCrypt Windows v4.5A](https://github.com/victormeloasm/AESCrypt/releases/download/ArgonC/AEScrypt_Windows_v4.5A.zip)
-- **Download for Linux:** [AESCrypt Linux v4.5A](https://github.com/victormeloasm/AESCrypt/releases/download/ArgonC/AEScrypt_Linux_v4.5A.zip)
+- **Release Page:** [AESCrypt v4.5 Argon Release](https://github.com/victormeloasm/AESCrypt/releases/tag/ArgonB)
+- **Download for Windows:** [AESCrypt Windows v4.5.1A](https://github.com/victormeloasm/AESCrypt/releases/download/ArgonB/AEScrypt_Windows_v4.5.1A.zip)
+- **Download for Linux:** [AESCrypt Linux v4.5.1A](https://github.com/victormeloasm/AESCrypt/releases/download/ArgonB/AEScrypt_Linux_v4.5.1A.zip)
 
 ## Usage
 
@@ -155,3 +155,6 @@ This project is licensed under the MIT License. For more information, please rev
 ## Contact
 
 For any questions, issues, or support related to AESCrypt 4.5 Argon, please reach out to us at [victormeloasm@gmail.com](mailto:victormeloasm@gmail.com).
+```
+
+This README captures all relevant updates, improvements, and links associated with the latest release of **AESCrypt 4.5 Argon**. Feel free to make any adjustments as needed!
