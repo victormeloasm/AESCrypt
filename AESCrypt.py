@@ -17,7 +17,7 @@ def derive_key(password, salt=None):
     key = hash_secret_raw(
         password.encode(),
         salt,
-        time_cost=6,  # Elevado de 2 para 4 para maior segurança
+        time_cost=6,  # Aumentado para maior segurança
         memory_cost=2**17,  # Memória ajustada para maior resistência
         parallelism=2,  # Aumentado o paralelismo
         hash_len=32,
@@ -151,21 +151,25 @@ def perform_action(action):
     finally:
         clear_memory(password_bytes)
 
+# Função corrigida para definir tema escuro sem 'set_theme'
 def set_dark_theme():
-    root.config(bg='#2e2e2e')
     style = ttk.Style()
-    style.theme_use("clam")
-    style.configure('TLabel', background='#2e2e2e', foreground='white')
-    style.configure('TButton', background='#444', foreground='white', font=('Helvetica', 12, 'bold'), padding=10)
-    style.map('TButton', background=[('active', '#555')])
+    style.theme_use("clam")  # Define o tema base para 'clam', que funciona em qualquer ambiente
+
+    # Configurações de cores para o tema escuro
+    style.configure("TLabel", foreground="white", background="#2e2e2e")
+    style.configure("TButton", foreground="white", background="#444444")
+    style.configure("TEntry", foreground="white", fieldbackground="#2e2e2e")
+    style.configure("TFrame", background="#2e2e2e")
+    root.configure(bg="#2e2e2e")  # Define o fundo da janela principal como escuro
 
 root = tk.Tk()
-root.title("AESCrypt v4.5 Argon")
+root.title("AESCrypt Argon 4.5.1")
 root.resizable(False, False)
 
 set_dark_theme()
 
-title_label = ttk.Label(root, text="AESCrypt v4.5 Argon", font=('Helvetica', 16, 'bold'))
+title_label = ttk.Label(root, text="AESCrypt Argon 4.5.1", font=('Helvetica', 16, 'bold'))
 title_label.grid(row=0, column=0, columnspan=3, padx=10, pady=(10, 0))
 
 instructions_label = ttk.Label(root, text="1. Select a file or folder to encrypt or decrypt.\n"
@@ -186,7 +190,7 @@ password_entry = tk.Entry(root, width=50)
 password_entry.grid(row=3, column=1, padx=10, pady=10)
 ttk.Button(root, text="Generate Password", command=generate_password).grid(row=4, column=2, padx=10, pady=10)
 
-ttk.Button(root, text="Encrypt", command=lambda: perform_action('encrypt')).grid(row=4, column=0, padx=10, pady=10)
-ttk.Button(root, text="Decrypt", command=lambda: perform_action('decrypt')).grid(row=4, column=1, padx=10, pady=10)
+ttk.Button(root, text="Encrypt", command=lambda: perform_action('encrypt')).grid(row=5, column=0, columnspan=1, padx=10, pady=10)
+ttk.Button(root, text="Decrypt", command=lambda: perform_action('decrypt')).grid(row=5, column=1, columnspan=1, padx=10, pady=10)
 
 root.mainloop()
