@@ -155,6 +155,4 @@ This project is licensed under the MIT License. For more information, please rev
 ## Contact
 
 For any questions, issues, or support related to AESCrypt 4.5 Argon, please reach out to us at [victormeloasm@gmail.com](mailto:victormeloasm@gmail.com).
-```
 
-This README captures all relevant updates, improvements, and links associated with the latest release of **AESCrypt 4.5 Argon**. Feel free to make any adjustments as needed!
