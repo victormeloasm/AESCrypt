@@ -1,6 +1,3 @@
-Here's the updated `README.md` for **AESCrypt Argon 4.6A**:
-
-```markdown
 # AESCrypt Argon 4.6A
 
 **AESCrypt Argon 4.6A** is a sophisticated tool designed for secure file and folder encryption and decryption. Utilizing state-of-the-art cryptographic methods, including Argon2 for password hashing and AES-256 for encryption, this application ensures robust protection for your sensitive data. This document provides a comprehensive guide on how to install, use, and troubleshoot AESCrypt Argon 4.6A.
