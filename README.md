@@ -155,6 +155,4 @@ This project is licensed under the MIT License. For more information, please rev
 ## Contact
 
 For any questions, issues, or support related to AESCrypt Argon 4.6A, please reach out to us at [victormeloasm@gmail.com](mailto:victormeloasm@gmail.com).
-```
 
-This version reflects the changes in name, screenshot, updated release information, and new links. Let me know if you need any further updates!
