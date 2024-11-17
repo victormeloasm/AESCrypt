@@ -1,8 +1,8 @@
-# AESCrypt Argon 4.6A
+# AESCrypt Argon 5.0B
 
-**AESCrypt Argon 4.6A** is a sophisticated tool designed for secure file and folder encryption and decryption. Utilizing state-of-the-art cryptographic methods, including Argon2 for password hashing and AES-256 for encryption, this application ensures robust protection for your sensitive data. This document provides a comprehensive guide on how to install, use, and troubleshoot AESCrypt Argon 4.6A.
+**AESCrypt Argon 5.0B** is a sophisticated tool designed for secure file and folder encryption and decryption. Utilizing state-of-the-art cryptographic methods, including Argon2 for password hashing and AES-256 for encryption, this application ensures robust protection for your sensitive data. This document provides a comprehensive guide on how to install, use, and troubleshoot AESCrypt Argon 5.0B.
 
-![Screenshot](captuu.png)
+![Screenshot](capturrr.png)
 
 [Visit the AESCrypt Website](https://aescrypt-argon.netlify.app/)
 
@@ -31,7 +31,7 @@
 
 ## Overview
 
-**AESCrypt Argon 4.6A** is a command-line and GUI-based tool designed for the encryption and decryption of files and folders. It leverages the Argon2 algorithm for secure password hashing and AES-256 for robust encryption. With a focus on security and ease of use, AESCrypt 4.6A provides a streamlined solution for protecting your sensitive information.
+**AESCrypt Argon 5.0B** is a command-line and GUI-based tool designed for the encryption and decryption of files and folders. It leverages the Argon2 algorithm for secure password hashing and AES-256 for robust encryption. With a focus on security and ease of use, AESCrypt 5.0B provides a streamlined solution for protecting your sensitive information.
 
 ## Features
 
@@ -60,7 +60,7 @@
 
 ### Cloning the Repository
 
-To get the latest version of AESCrypt Argon 4.6A, you can clone the repository using Git:
+To get the latest version of AESCrypt Argon 5.0B, you can clone the repository using Git:
 
 ```bash
 git clone https://github.com/victormeloasm/AESCrypt.git
@@ -74,21 +74,21 @@ Navigate to the directory where `requirements.txt` is located and install the ne
 pip install -r requirements.txt
 ```
 
-This will install all the dependencies required for AESCrypt Argon 4.6A to function correctly.
+This will install all the dependencies required for AESCrypt Argon 5.0B to function correctly.
 
 ## Download
 
-You can download the latest release of **AESCrypt Argon 4.6A** from the GitHub repository. The release package includes the compiled executable and all necessary files.
+You can download the latest release of **AESCrypt Argon 5.0B** from the GitHub repository. The release package includes the compiled executable and all necessary files.
 
-- **Release Page:** [AESCrypt Argon 4.6A Release](https://github.com/victormeloasm/AESCrypt/releases/tag/ArgonD)
-- **Download for Windows:** [AESCrypt Windows v4.6A](https://github.com/victormeloasm/AESCrypt/releases/download/ArgonD/AEScrypt_Windows_v4.6A.zip)
-- **Download for Linux:** [AESCrypt Linux v4.6A](https://github.com/victormeloasm/AESCrypt/releases/download/ArgonD/AEScrypt_Linux_v4.6A.zip)
+- **Release Page:** [AESCrypt Argon 5.0B Release](https://github.com/victormeloasm/AESCrypt/releases/tag/ArgonE)
+- **Download for Windows:** [AESCrypt Windows v5.0B](https://github.com/victormeloasm/AESCrypt/releases/download/ArgonE/AEScrypt_Windows_v5.0B.zip)
+- **Download for Linux:** [AESCrypt Linux v5.0B](https://github.com/victormeloasm/AESCrypt/releases/download/ArgonE/AEScrypt_Linux_v5.0B.zip)
 
 ## Usage
 
 ### Launching the Application
 
-To start AESCrypt Argon 4.6A:
+To start AESCrypt Argon 5.0B:
 
 - **If Using Python**: Execute the script directly:
   ```bash
@@ -99,7 +99,7 @@ To start AESCrypt Argon 4.6A:
 
 ### User Interface Overview
 
-The AESCrypt Argon 4.6A interface is designed to be intuitive and user-friendly:
+The AESCrypt Argon 5.0B interface is designed to be intuitive and user-friendly:
 
 - **File/Folder Path**: A text field and browse button to select files or folders for encryption or decryption.
 - **Password Entry**: A field to input or generate a strong password.
@@ -142,7 +142,7 @@ The AESCrypt Argon 4.6A interface is designed to be intuitive and user-friendly:
 
 ## Contributing
 
-Contributions to AESCrypt Argon 4.6A are welcome! If you have improvements, bug fixes, or new features to suggest, please follow these steps:
+Contributions to AESCrypt Argon 5.0B are welcome! If you have improvements, bug fixes, or new features to suggest, please follow these steps:
 
 1. **Fork the Repository**: Create your own fork of the repository.
 2. **Create a Branch**: Work on your changes in a new branch.
@@ -154,5 +154,4 @@ This project is licensed under the MIT License. For more information, please rev
 
 ## Contact
 
-For any questions, issues, or support related to AESCrypt Argon 4.6A, please reach out to us at [victormeloasm@gmail.com](mailto:victormeloasm@gmail.com).
-
+For any questions, issues, or support related to AESCrypt Argon 5.0B, please reach out to us at [victormeloasm@gmail.com](mailto:victormeloasm@gmail.com).
