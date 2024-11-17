@@ -46,7 +46,7 @@ htmlcov/
 nosetests.xml
 coverage.xml
 *.cover
-*.py,cover
+,cover
 .hypothesis/
 .pytest_cache/
 cover/
@@ -54,6 +54,7 @@ cover/
 # Translations
 *.mo
 *.pot
+*.poc
 
 # Django stuff:
 *.log
