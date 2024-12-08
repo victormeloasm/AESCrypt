@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documentation - AESCrypt Argon 5.0</title>
+    <title>Documentation - AESCrypt Argon 6.0AK</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="Aescrypt.png">
     <style>
@@ -43,7 +43,7 @@
 <body>
     <header>
         <div class="container">
-            <h1>AESCrypt Argon 5.0</h1> <!-- Updated for version 5.0 -->
+            <h1>AESCrypt Argon 6.0AK</h1> <!-- Updated for version 6.0AK -->
             <div class="home-button">
                 <a href="index.html" class="cta-button">Home</a>
             </div>
@@ -67,7 +67,7 @@
         <section id="overview">
             <h2>Overview</h2>
             <p>
-                AESCrypt Argon 5.0 is a state-of-the-art encryption tool designed to provide secure, robust, and user-friendly encryption and decryption of files and folders. This version integrates AES-256-GCM encryption alongside Argon2id hashing for password protection, delivering a formidable defense against modern cryptographic attacks. The application offers secure file deletion, metadata protection, and an anti-keylogger mechanism. AESCrypt is built to be accessible to everyday users, while also ensuring professionals have the tools needed to safeguard their sensitive data efficiently and securely.
+                AESCrypt Argon 6.0AK is the latest version of the AESCrypt tool, featuring AES-256-GCM encryption combined with Argon2id password hashing. This version provides unparalleled security, ensuring the protection of your sensitive data against modern cryptographic attacks. The tool also includes features such as secure file deletion, metadata protection, anti-keylogger measures, and much more. With its user-friendly interface, AESCrypt Argon 6.0AK is suitable for both everyday users and professionals who need top-tier data protection.
             </p>
             <img src="captit.png" alt="AESCrypt Screenshot">
         </section>
@@ -75,99 +75,82 @@
         <section id="features">
             <h2>Features</h2>
             <ul>
-                <li><strong>AES-256-GCM Encryption:</strong> AES-256-GCM is a widely recognized encryption standard used for secure data encryption. The GCM mode provides additional integrity checks, making encrypted data both confidential and tamper-proof.</li>
-                <li><strong>Password Hashing with Argon2id:</strong> Argon2id offers exceptional protection against brute-force and side-channel attacks, making it one of the most secure password hashing algorithms available.</li>
-                <li><strong>Secure File Deletion:</strong> Ensures that files are securely deleted from the disk by overwriting them with random data multiple times, preventing file recovery by unauthorized parties.</li>
-                <li><strong>Metadata Encryption:</strong> Protects not only the contents of your files but also their metadata, such as filenames, timestamps, and file sizes, which could otherwise leak information.</li>
-                <li><strong>Batch Encryption:</strong> Encrypt multiple files or entire directories in one go, saving time and enhancing productivity when dealing with numerous sensitive files.</li>
-                <li><strong>Cross-Platform Compatibility:</strong> Available for both Windows and Linux systems, ensuring that users across different platforms can benefit from the tool.</li>
-                <li><strong>Modern User Interface:</strong> A sleek, dark-themed GUI that reduces eye strain while making it easy to navigate through the encryption and decryption process.</li>
-                <li><strong>Random Password Generation:</strong> Generate strong, random passwords with a click, ensuring robust encryption without the risk of weak passwords.</li>
-                <li><strong>Random Byte Injection:</strong> Introduces random data into encrypted files, obscuring the original file size and making it more difficult for attackers to identify encrypted files based on their size.</li>
-                <li><strong>Memory Management Improvements:</strong> Sensitive data such as encryption keys and passwords are securely erased from memory once they're no longer needed, ensuring that they cannot be leaked.</li>
-                <li><strong>Anti-Keylogger Protection:</strong> With integrated measures to block keyloggers, AESCrypt helps to prevent your passwords from being intercepted by malicious software during encryption and decryption.</li>
+                <li><strong>AES-256-GCM Encryption:</strong> The most secure and trusted encryption standard available today.</li>
+                <li><strong>Password Hashing with Argon2id:</strong> A powerful defense against brute-force attacks.</li>
+                <li><strong>Secure File Deletion:</strong> Permanently erases files by overwriting them multiple times.</li>
+                <li><strong>Metadata Encryption:</strong> Protects not only the contents but also the metadata of files.</li>
+                <li><strong>Batch Encryption:</strong> Encrypt multiple files or entire directories in one action.</li>
+                <li><strong>Cross-Platform Compatibility:</strong> Works seamlessly on both Windows and Linux systems.</li>
+                <li><strong>Modern User Interface:</strong> A sleek dark mode interface for easy navigation.</li>
+                <li><strong>Random Password Generation:</strong> Generate strong, random passwords for enhanced security.</li>
+                <li><strong>Anti-Keylogger Protection:</strong> Integrated mechanisms to block keyloggers and protect your passwords.</li>
             </ul>
         </section>
 
         <section id="installation">
             <h2>Installation</h2>
-            <p>Follow the steps below to install AESCrypt Argon 5.0 on your system:</p>
+            <p>Follow these steps to install AESCrypt Argon 6.0AK on your system:</p>
             
             <h3>Prerequisites</h3>
-            <p>Before you install AESCrypt, ensure that Python is installed on your system. You can download the latest version from <a href="https://www.python.org/downloads/" target="_blank">python.org</a>.</p>
+            <p>Ensure Python is installed on your system. You can download it from <a href="https://www.python.org/downloads/" target="_blank">python.org</a>.</p>
 
             <h3>Cloning the Repository</h3>
-            <p>Clone the official AESCrypt repository from GitHub using the following command:</p>
+            <p>Clone the official AESCrypt repository from GitHub using:</p>
             <pre><code>git clone https://github.com/victormeloasm/AESCrypt.git</code></pre>
 
             <h3>Installing Dependencies</h3>
-            <p>After cloning the repository, navigate to the project directory and install the required dependencies by running the command:</p>
+            <p>Install the required dependencies with:</p>
             <pre><code>pip install -r requirements.txt</code></pre>
 
             <h3>Compiling Executable (Optional)</h3>
-            <p>If you wish to compile the tool into an executable file for easier use, you can use PyInstaller:</p>
+            <p>For a standalone executable, use PyInstaller:</p>
             <pre><code>pyinstaller --onefile aescrypt.py</code></pre>
-            <p>This command will generate a standalone `.exe` file that you can run directly on your system without needing to install Python.</p>
 
-            <h3>Creating a Virtual Environment (Optional)</h3>
-            <p>For better dependency management, consider setting up a Python virtual environment:</p>
+            <h3>Virtual Environment (Optional)</h3>
+            <p>Set up a virtual environment for dependency management:</p>
             <pre><code>python -m venv aescryptenv</code></pre>
-            <p>Activate the environment by running:</p>
+            <p>Activate it with:</p>
             <pre><code>source aescryptenv/bin/activate  # Linux/macOS</code></pre>
             <pre><code>aescryptenv\Scripts\activate  # Windows</code></pre>
-            <p>Then install the dependencies as described earlier.</p>
         </section>
 
         <section id="usage">
             <h2>Usage</h2>
-            <p>Follow these steps to encrypt and decrypt files and folders using AESCrypt Argon 5.0:</p>
-
-            <h3>Launching the Application</h3>
-            <p>To start using the application, simply run the Python script via terminal or double-click the `.exe` file if you have the compiled version.</p>
+            <p>Encrypt and decrypt files and folders with ease:</p>
 
             <h3>Encrypting Files</h3>
             <ol>
-                <li>Click "Browse File" to select the file you wish to encrypt.</li>
-                <li>Enter a secure password or generate one using the "Generate Password" button.</li>
-                <li>Click "Encrypt" to encrypt the file. It will be saved with the ".aes" extension.</li>
+                <li>Click "Browse File" to select the file.</li>
+                <li>Enter or generate a secure password.</li>
+                <li>Click "Encrypt" to save the encrypted file.</li>
             </ol>
 
             <h3>Decrypting Files</h3>
             <ol>
-                <li>Select the encrypted file by clicking "Browse File".</li>
+                <li>Select the encrypted file.</li>
                 <li>Enter the password used for encryption.</li>
-                <li>Click "Decrypt" to restore the original file.</li>
-            </ol>
-
-            <h3>Encrypting Folders</h3>
-            <ol>
-                <li>Click "Browse Folder" to select the folder containing the files you wish to encrypt.</li>
-                <li>Enter a secure password for encryption.</li>
-                <li>Click "Encrypt" to encrypt all files in the folder.</li>
+                <li>Click "Decrypt" to restore the file.</li>
             </ol>
         </section>
 
         <section id="security">
             <h2>Security Considerations</h2>
-            <p>Security is paramount when handling sensitive data, and AESCrypt Argon 5.0 ensures that your files and passwords are well-protected:</p>
             <ul>
-                <li><strong>Use Strong Passwords:</strong> Always choose strong, unique passwords to enhance the encryption's effectiveness against brute-force attacks.</li>
-                <li><strong>Secure Memory Handling:</strong> All sensitive information, such as passwords and encryption keys, are erased from memory as soon as they are no longer required, reducing the risk of data leakage.</li>
-                <li><strong>Protection Against Keyloggers:</strong> AESCrypt incorporates anti-keylogger protection to safeguard your passwords from being intercepted by malicious software.</li>
-                <li><strong>Keep Software Updated:</strong> Always ensure that you are using the latest version of AESCrypt to benefit from the newest security features and bug fixes.</li>
-                <li><strong>Backup Your Files:</strong> While AESCrypt offers strong encryption, always maintain a backup of your encrypted files to prevent data loss.</li>
+                <li><strong>Use Strong Passwords:</strong> Always use a unique, strong password for encryption.</li>
+                <li><strong>Memory Handling:</strong> Sensitive data is erased from memory when no longer needed.</li>
+                <li><strong>Protection Against Keyloggers:</strong> Integrated measures block keyloggers during usage.</li>
             </ul>
         </section>
 
         <section id="license">
             <h2>License</h2>
-            <p>AESCrypt Argon 5.0 is licensed under the MIT License. You are free to use, modify, and distribute the software, provided that you include the copyright notice in all copies or substantial portions of the software. For more information, please refer to the LICENSE file in the repository.</p>
+            <p>AESCrypt Argon 6.0AK is licensed under the MIT License. You can freely use, modify, and distribute the software, with proper attribution. See the LICENSE file for more details.</p>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 AESCrypt Argon 5.0 - All Rights Reserved.</p>
+            <p>&copy; 2024 AESCrypt Argon 6.0AK - All Rights Reserved.</p>
         </div>
     </footer>
 </body>
