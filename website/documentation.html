@@ -108,6 +108,14 @@
             <p>If you wish to compile the tool into an executable file for easier use, you can use PyInstaller:</p>
             <pre><code>pyinstaller --onefile aescrypt.py</code></pre>
             <p>This command will generate a standalone `.exe` file that you can run directly on your system without needing to install Python.</p>
+
+            <h3>Creating a Virtual Environment (Optional)</h3>
+            <p>For better dependency management, consider setting up a Python virtual environment:</p>
+            <pre><code>python -m venv aescryptenv</code></pre>
+            <p>Activate the environment by running:</p>
+            <pre><code>source aescryptenv/bin/activate  # Linux/macOS</code></pre>
+            <pre><code>aescryptenv\Scripts\activate  # Windows</code></pre>
+            <p>Then install the dependencies as described earlier.</p>
         </section>
 
         <section id="usage">
@@ -147,18 +155,20 @@
                 <li><strong>Secure Memory Handling:</strong> All sensitive information, such as passwords and encryption keys, are erased from memory as soon as they are no longer required, reducing the risk of data leakage.</li>
                 <li><strong>Protection Against Keyloggers:</strong> AESCrypt incorporates anti-keylogger protection to safeguard your passwords from being intercepted by malicious software.</li>
                 <li><strong>Keep Software Updated:</strong> Always ensure that you are using the latest version of AESCrypt to benefit from the newest security features and bug fixes.</li>
-                <li><strong>Backup Your Files:</strong> Always create backups of important files before encrypting them, as data loss can occur due to unforeseen circumstances.</li>
+                <li><strong>Backup Your Files:</strong> While AESCrypt offers strong encryption, always maintain a backup of your encrypted files to prevent data loss.</li>
             </ul>
         </section>
 
         <section id="license">
             <h2>License</h2>
-            <p>This software is licensed under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a>. For more details, refer to the LICENSE file included in the repository.</p>
+            <p>AESCrypt Argon 5.0 is licensed under the MIT License. You are free to use, modify, and distribute the software, provided that you include the copyright notice in all copies or substantial portions of the software. For more information, please refer to the LICENSE file in the repository.</p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 AESCrypt Team. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 AESCrypt Argon 5.0 - All Rights Reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
