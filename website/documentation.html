@@ -67,7 +67,7 @@
         <section id="overview">
             <h2>Overview</h2>
             <p>
-                AESCrypt Argon 5.0 is a highly sophisticated tool designed to provide advanced encryption and decryption of files and folders. This version leverages cutting-edge cryptographic algorithms such as AES-256-GCM for encryption and Argon2 for password hashing. Together, these technologies ensure robust data protection and resilience against modern attacks. The application also includes innovative features such as secure file deletion, metadata encryption, and anti-keylogger measures for added security. Whether you're a casual user or a security-conscious professional, AESCrypt provides an accessible and powerful solution for safeguarding your sensitive data.
+                AESCrypt Argon 5.0 is a state-of-the-art encryption tool designed to provide secure, robust, and user-friendly encryption and decryption of files and folders. This version integrates AES-256-GCM encryption alongside Argon2id hashing for password protection, delivering a formidable defense against modern cryptographic attacks. The application offers secure file deletion, metadata protection, and an anti-keylogger mechanism. AESCrypt is built to be accessible to everyday users, while also ensuring professionals have the tools needed to safeguard their sensitive data efficiently and securely.
             </p>
             <img src="captit.png" alt="AESCrypt Screenshot">
         </section>
@@ -75,72 +75,79 @@
         <section id="features">
             <h2>Features</h2>
             <ul>
-                <li><strong>AES-256-GCM Encryption:</strong> The program uses AES-256-GCM, a symmetric encryption algorithm known for its high security and support for authenticated encryption, ensuring that data is both confidential and tamper-proof.</li>
-                <li><strong>Password Hashing with Argon2id:</strong> This password hashing technique offers exceptional resistance against brute force and side-channel attacks, making it one of the most secure options available.</li>
-                <li><strong>Secure File Deletion:</strong> When files are deleted, they are overwritten with random data multiple times, preventing their recovery by unauthorized parties.</li>
-                <li><strong>Metadata Encryption:</strong> AESCrypt protects not only the content of the files but also metadata, such as file names and modification times, which are often overlooked during encryption processes.</li>
-                <li><strong>Batch Encryption:</strong> Encrypt multiple files or an entire folder with a single action, improving both speed and efficiency.</li>
-                <li><strong>Cross-Platform Compatibility:</strong> Available on both Windows and Linux, ensuring users on different platforms can benefit from its capabilities.</li>
-                <li><strong>Enhanced User Interface:</strong> A modern, sleek GUI that provides an intuitive experience, especially with its dark theme that reduces eye strain during long sessions.</li>
-                <li><strong>Random Password Generation:</strong> Generate strong, random passwords for encryption and decryption, ensuring that weak passwords are never an issue.</li>
-                <li><strong>Random Byte Addition:</strong> Introduces random data into encrypted files to obscure their size and make it more difficult to identify encrypted files based on their file size.</li>
-                <li><strong>Memory Management Improvements:</strong> The application ensures that sensitive data, such as passwords and encryption keys, are securely erased from memory after use, preventing potential data leakage.</li>
-                <li><strong>Anti-Keylogger Protection:</strong> AESCrypt integrates advanced techniques to prevent keyloggers from capturing sensitive data such as passwords during encryption and decryption processes. By using secure input methods and memory isolation, the program reduces the risk of keylogging attacks, ensuring that user credentials remain safe from external threats.</li>
+                <li><strong>AES-256-GCM Encryption:</strong> AES-256-GCM is a widely recognized encryption standard used for secure data encryption. The GCM mode provides additional integrity checks, making encrypted data both confidential and tamper-proof.</li>
+                <li><strong>Password Hashing with Argon2id:</strong> Argon2id offers exceptional protection against brute-force and side-channel attacks, making it one of the most secure password hashing algorithms available.</li>
+                <li><strong>Secure File Deletion:</strong> Ensures that files are securely deleted from the disk by overwriting them with random data multiple times, preventing file recovery by unauthorized parties.</li>
+                <li><strong>Metadata Encryption:</strong> Protects not only the contents of your files but also their metadata, such as filenames, timestamps, and file sizes, which could otherwise leak information.</li>
+                <li><strong>Batch Encryption:</strong> Encrypt multiple files or entire directories in one go, saving time and enhancing productivity when dealing with numerous sensitive files.</li>
+                <li><strong>Cross-Platform Compatibility:</strong> Available for both Windows and Linux systems, ensuring that users across different platforms can benefit from the tool.</li>
+                <li><strong>Modern User Interface:</strong> A sleek, dark-themed GUI that reduces eye strain while making it easy to navigate through the encryption and decryption process.</li>
+                <li><strong>Random Password Generation:</strong> Generate strong, random passwords with a click, ensuring robust encryption without the risk of weak passwords.</li>
+                <li><strong>Random Byte Injection:</strong> Introduces random data into encrypted files, obscuring the original file size and making it more difficult for attackers to identify encrypted files based on their size.</li>
+                <li><strong>Memory Management Improvements:</strong> Sensitive data such as encryption keys and passwords are securely erased from memory once they're no longer needed, ensuring that they cannot be leaked.</li>
+                <li><strong>Anti-Keylogger Protection:</strong> With integrated measures to block keyloggers, AESCrypt helps to prevent your passwords from being intercepted by malicious software during encryption and decryption.</li>
             </ul>
         </section>
 
         <section id="installation">
             <h2>Installation</h2>
-            <p>Follow these steps to install AESCrypt Argon 5.0:</p>
+            <p>Follow the steps below to install AESCrypt Argon 5.0 on your system:</p>
+            
             <h3>Prerequisites</h3>
-            <p>Ensure Python is installed on your system. You can download it from <a href="https://www.python.org/downloads/">python.org</a>.</p>
+            <p>Before you install AESCrypt, ensure that Python is installed on your system. You can download the latest version from <a href="https://www.python.org/downloads/" target="_blank">python.org</a>.</p>
 
             <h3>Cloning the Repository</h3>
-            <p>Clone the AESCrypt repository from GitHub:</p>
+            <p>Clone the official AESCrypt repository from GitHub using the following command:</p>
             <pre><code>git clone https://github.com/victormeloasm/AESCrypt.git</code></pre>
 
             <h3>Installing Dependencies</h3>
-            <p>Navigate to the cloned directory and install the required Python dependencies:</p>
+            <p>After cloning the repository, navigate to the project directory and install the required dependencies by running the command:</p>
             <pre><code>pip install -r requirements.txt</code></pre>
+
+            <h3>Compiling Executable (Optional)</h3>
+            <p>If you wish to compile the tool into an executable file for easier use, you can use PyInstaller:</p>
+            <pre><code>pyinstaller --onefile aescrypt.py</code></pre>
+            <p>This command will generate a standalone `.exe` file that you can run directly on your system without needing to install Python.</p>
         </section>
 
         <section id="usage">
             <h2>Usage</h2>
-            <p>To start using AESCrypt Argon 5.0, follow the instructions below:</p>
+            <p>Follow these steps to encrypt and decrypt files and folders using AESCrypt Argon 5.0:</p>
+
             <h3>Launching the Application</h3>
-            <p>You can either run the script via a terminal or double-click the compiled `.exe` file if you have the executable version.</p>
+            <p>To start using the application, simply run the Python script via terminal or double-click the `.exe` file if you have the compiled version.</p>
 
             <h3>Encrypting Files</h3>
             <ol>
-                <li>Select a file by clicking the "Browse File" button.</li>
-                <li>Enter a secure password or generate a new one by clicking "Generate Password".</li>
-                <li>Click "Encrypt" to encrypt the file, which will be saved with the `.aes` extension.</li>
+                <li>Click "Browse File" to select the file you wish to encrypt.</li>
+                <li>Enter a secure password or generate one using the "Generate Password" button.</li>
+                <li>Click "Encrypt" to encrypt the file. It will be saved with the ".aes" extension.</li>
             </ol>
 
             <h3>Decrypting Files</h3>
             <ol>
-                <li>Click "Browse File" to select the `.aes` file you want to decrypt.</li>
-                <li>Enter the password used during encryption.</li>
+                <li>Select the encrypted file by clicking "Browse File".</li>
+                <li>Enter the password used for encryption.</li>
                 <li>Click "Decrypt" to restore the original file.</li>
             </ol>
 
             <h3>Encrypting Folders</h3>
             <ol>
-                <li>Select a folder by clicking "Browse Folder".</li>
-                <li>Enter a password for encryption.</li>
-                <li>Click "Encrypt" to secure all files within the folder.</li>
+                <li>Click "Browse Folder" to select the folder containing the files you wish to encrypt.</li>
+                <li>Enter a secure password for encryption.</li>
+                <li>Click "Encrypt" to encrypt all files in the folder.</li>
             </ol>
         </section>
 
         <section id="security">
             <h2>Security Considerations</h2>
-            <p>Security is our top priority, and AESCrypt Argon 5.0 incorporates the latest security features to protect your data:</p>
+            <p>Security is paramount when handling sensitive data, and AESCrypt Argon 5.0 ensures that your files and passwords are well-protected:</p>
             <ul>
-                <li><strong>Strong Passwords:</strong> Always use a strong, unique password for encryption to ensure maximum protection against brute-force attacks.</li>
-                <li><strong>Secure Memory Management:</strong> Sensitive data such as encryption keys and passwords are immediately erased from memory after use to prevent potential leaks.</li>
-                <li><strong>Protection Against Keyloggers:</strong> With the integrated anti-keylogger protection, AESCrypt ensures that no keylogging software can intercept your passwords during use.</li>
-                <li><strong>Frequent Updates:</strong> Keep AESCrypt updated to benefit from the latest security improvements and bug fixes.</li>
-                <li><strong>Data Backup:</strong> Always back up your important files before encrypting them to avoid data loss in case of unforeseen issues.</li>
+                <li><strong>Use Strong Passwords:</strong> Always choose strong, unique passwords to enhance the encryption's effectiveness against brute-force attacks.</li>
+                <li><strong>Secure Memory Handling:</strong> All sensitive information, such as passwords and encryption keys, are erased from memory as soon as they are no longer required, reducing the risk of data leakage.</li>
+                <li><strong>Protection Against Keyloggers:</strong> AESCrypt incorporates anti-keylogger protection to safeguard your passwords from being intercepted by malicious software.</li>
+                <li><strong>Keep Software Updated:</strong> Always ensure that you are using the latest version of AESCrypt to benefit from the newest security features and bug fixes.</li>
+                <li><strong>Backup Your Files:</strong> Always create backups of important files before encrypting them, as data loss can occur due to unforeseen circumstances.</li>
             </ul>
         </section>
 
