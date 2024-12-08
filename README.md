@@ -1,8 +1,8 @@
-# AESCrypt Argon 5.0B
+# AESCrypt Argon 6.0AK
 
-**AESCrypt Argon 5.0B** is a sophisticated tool designed for secure file and folder encryption and decryption. Utilizing state-of-the-art cryptographic methods, including Argon2 for password hashing and AES-256 for encryption, this application ensures robust protection for your sensitive data. This document provides a comprehensive guide on how to install, use, and troubleshoot AESCrypt Argon 5.0B.
+**AESCrypt Argon 6.0AK** is an advanced encryption tool designed for secure file and folder encryption and decryption. It uses modern cryptographic methods, including Argon2 for password hashing and AES-256 for encryption, ensuring robust protection for sensitive data. This version introduces the **AK (Anti-Keylogger)** feature for enhanced security and several other improvements. This document provides an in-depth guide on installation, usage, and troubleshooting.
 
-![Screenshot](capturrr.png)
+![Screenshot](captit.png)
 
 [Visit the AESCrypt Website](https://aescrypt-argon.netlify.app/)
 
@@ -31,7 +31,7 @@
 
 ## Overview
 
-**AESCrypt Argon 5.0B** is a command-line and GUI-based tool designed for the encryption and decryption of files and folders. It leverages the Argon2 algorithm for secure password hashing and AES-256 for robust encryption. With a focus on security and ease of use, AESCrypt 5.0B provides a streamlined solution for protecting your sensitive information.
+**AESCrypt Argon 6.0AK** is both a command-line and GUI-based tool for file and folder encryption and decryption. It employs the Argon2 algorithm for password hashing and AES-256 encryption for maximum protection. The **AK (Anti-Keylogger)** feature has been added to enhance security against potential keylogging threats, making this version significantly more secure.
 
 ## Features
 
@@ -51,6 +51,7 @@
   - Multiple overwrite passes for secure file deletion.
   - Enhanced salting in Argon2 for added security.
   - Memory zeroing to prevent sensitive data leakage.
+  - **AK (Anti-Keylogger)**: A feature designed to prevent keyloggers from capturing sensitive information by disguising keyboard input, ensuring higher security during encryption and decryption.
 
 ## Installation
 
@@ -60,7 +61,7 @@
 
 ### Cloning the Repository
 
-To get the latest version of AESCrypt Argon 5.0B, you can clone the repository using Git:
+To get the latest version of AESCrypt Argon 6.0AK, you can clone the repository using Git:
 
 ```bash
 git clone https://github.com/victormeloasm/AESCrypt.git
@@ -74,21 +75,21 @@ Navigate to the directory where `requirements.txt` is located and install the ne
 pip install -r requirements.txt
 ```
 
-This will install all the dependencies required for AESCrypt Argon 5.0B to function correctly.
+This will install all the dependencies required for AESCrypt Argon 6.0AK to function correctly.
 
 ## Download
 
-You can download the latest release of **AESCrypt Argon 5.0B** from the GitHub repository. The release package includes the compiled executable and all necessary files.
+You can download the latest release of **AESCrypt Argon 6.0AK** from the GitHub repository. The release package includes the compiled executable and all necessary files.
 
-- **Release Page:** [AESCrypt Argon 5.0B Release](https://github.com/victormeloasm/AESCrypt/releases/tag/ArgonE)
-- **Download for Windows:** [AESCrypt Windows v5.0B](https://github.com/victormeloasm/AESCrypt/releases/download/ArgonE/AEScrypt_Windows_v5.0B.zip)
-- **Download for Linux:** [AESCrypt Linux v5.0B](https://github.com/victormeloasm/AESCrypt/releases/download/ArgonE/AEScrypt_Linux_v5.0B.zip)
+- **Release Page:** [AESCrypt Argon 6.0AK Release](https://github.com/victormeloasm/AESCrypt/releases/tag/ArgonAK)
+- **Download for Windows:** [AESCrypt Windows v6.0AK](https://github.com/victormeloasm/AESCrypt/releases/download/ArgonAK/AEScrypt_Windows_v6.0AKB.zip)
+- **Download for Linux:** [AESCrypt Linux v6.0AK](https://github.com/victormeloasm/AESCrypt/releases/download/ArgonAK/AEScrypt_Linux_v6.0AK.zip)
 
 ## Usage
 
 ### Launching the Application
 
-To start AESCrypt Argon 5.0B:
+To start AESCrypt Argon 6.0AK:
 
 - **If Using Python**: Execute the script directly:
   ```bash
@@ -99,7 +100,7 @@ To start AESCrypt Argon 5.0B:
 
 ### User Interface Overview
 
-The AESCrypt Argon 5.0B interface is designed to be intuitive and user-friendly:
+The AESCrypt Argon 6.0AK interface is designed to be intuitive and user-friendly:
 
 - **File/Folder Path**: A text field and browse button to select files or folders for encryption or decryption.
 - **Password Entry**: A field to input or generate a strong password.
@@ -142,7 +143,7 @@ The AESCrypt Argon 5.0B interface is designed to be intuitive and user-friendly:
 
 ## Contributing
 
-Contributions to AESCrypt Argon 5.0B are welcome! If you have improvements, bug fixes, or new features to suggest, please follow these steps:
+Contributions to AESCrypt Argon 6.0AK are welcome! If you have improvements, bug fixes, or new features to suggest, please follow these steps:
 
 1. **Fork the Repository**: Create your own fork of the repository.
 2. **Create a Branch**: Work on your changes in a new branch.
@@ -154,4 +155,4 @@ This project is licensed under the MIT License. For more information, please rev
 
 ## Contact
 
-For any questions, issues, or support related to AESCrypt Argon 5.0B, please reach out to us at [victormeloasm@gmail.com](mailto:victormeloasm@gmail.com).
+For any questions, issues, or support related to AESCrypt Argon 6.0AK, please reach out to us at [victormeloasm@gmail.com](mailto:victormeloasm@gmail.com).
