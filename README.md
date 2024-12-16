@@ -1,8 +1,8 @@
-# AESCrypt Argon 6.0AK
+# AESCrypt Argon 6.2AK (Anti-Keylogger)
 
-**AESCrypt Argon 6.0AK** is an advanced encryption tool designed for secure file and folder encryption and decryption. It uses modern cryptographic methods, including Argon2 for password hashing and AES-256 for encryption, ensuring robust protection for sensitive data. This version introduces the **AK (Anti-Keylogger)** feature for enhanced security and several other improvements. This document provides an in-depth guide on installation, usage, and troubleshooting.
+**AESCrypt Argon 6.2AK** is an advanced encryption tool designed for secure file and folder encryption and decryption. This version enhances security with the **AK (Anti-Keylogger)** feature, along with additional improvements and updates to existing methods, offering even more robust protection for your sensitive data. By incorporating the latest in password hashing with Argon2 and AES-256 for encryption, AESCrypt Argon 6.2AK is the ultimate tool for those who prioritize privacy and security in their digital lives.
 
-![Screenshot](captit.png)
+![Screenshot](captuu.png)
 
 [Visit the AESCrypt Website](https://aescrypt-argon.netlify.app/)
 
@@ -31,37 +31,38 @@
 
 ## Overview
 
-**AESCrypt Argon 6.0AK** is both a command-line and GUI-based tool for file and folder encryption and decryption. It employs the Argon2 algorithm for password hashing and AES-256 encryption for maximum protection. The **AK (Anti-Keylogger)** feature has been added to enhance security against potential keylogging threats, making this version significantly more secure.
+**AESCrypt Argon 6.2AK** is a robust tool for file and folder encryption, utilizing the cutting-edge **Argon2 algorithm** for password hashing alongside **AES-256 encryption** to keep your data safe. This release introduces **AK (Anti-Keylogger)** protection, ensuring that your sensitive input remains secure from keyloggers while using the application. It’s designed for both professionals and casual users who require an easy-to-use, highly secure, and effective encryption tool.
 
 ## Features
 
-- **File Encryption**: Encrypts individual files with AES-256 encryption using a secure, hashed password.
-- **File Decryption**: Decrypts files previously encrypted with AESCrypt.
-- **Batch Encryption**: Encrypts all files within a selected folder, simplifying bulk encryption tasks.
-- **Random Byte Padding**: Automatically adds at least 1MB of random bytes to the encrypted files, disguising their actual size for enhanced security.
-- **Password Generation**: Generates strong, random passwords for enhanced security.
-- **User-Friendly GUI**: Modern, dark-themed graphical user interface for an intuitive user experience.
-- **No Console Window**: Operates without a console window, providing a clean and professional interface.
-- **Secure File Deletion**: Overwrites original files with random data before deletion to prevent unauthorized recovery.
-- **Metadata Encryption**: Protects sensitive file metadata from exposure.
-- **HMAC for Integrity**: Utilizes HMAC to verify data integrity during encryption and decryption.
-- **Cross-Platform Compatibility**: Works seamlessly across different operating systems.
-- **Improved Security Features**:
-  - Increased Argon2 time cost for stronger password hashing.
-  - Multiple overwrite passes for secure file deletion.
-  - Enhanced salting in Argon2 for added security.
-  - Memory zeroing to prevent sensitive data leakage.
-  - **AK (Anti-Keylogger)**: A feature designed to prevent keyloggers from capturing sensitive information by disguising keyboard input, ensuring higher security during encryption and decryption.
+- **File Encryption**: Encrypts files individually using AES-256 with strong password protection.
+- **File Decryption**: Decrypts files previously encrypted by AESCrypt with the correct password.
+- **Batch Encryption**: Supports bulk file encryption by encrypting all files in a selected folder.
+- **Random Byte Padding**: Adds random padding to encrypted files, concealing their actual size and enhancing security.
+- **Password Generation**: Generates strong, unique passwords for enhanced protection.
+- **User-Friendly GUI**: Modern interface for easy use, featuring a dark theme and intuitive layout.
+- **No Console Window**: Provides a professional, clean, and streamlined experience without any console window interruptions.
+- **Secure File Deletion**: Ensures securely deleted files cannot be recovered by overwriting them multiple times.
+- **Metadata Encryption**: Secures metadata to prevent exposure of sensitive information.
+- **HMAC Integrity**: Verifies file integrity using HMAC, ensuring accurate encryption and decryption.
+- **Cross-Platform Support**: Compatible across Windows and Linux operating systems.
+- **Enhanced Security Features**:
+  - Argon2 hashing is enhanced with a time cost for robust password security.
+  - Added multiple overwrite passes for file deletion.
+  - Stronger salting methods in Argon2 for better security.
+  - Memory zeroing to prevent leakage of sensitive data.
+  - **AK (Anti-Keylogger)**: Blocks keyloggers from intercepting user keystrokes during encryption and decryption processes.
+- **Improved User Interface**: More responsive, with tooltips and a better layout for faster workflows.
 
 ## Installation
 
 ### Prerequisites
 
-- **Python**: Ensure Python is installed on your system. You can download it from [python.org](https://www.python.org/downloads/). During installation, check the box to add Python to your PATH.
+Ensure Python is installed on your system. You can download Python from [python.org](https://www.python.org/downloads/) (check the box to add Python to your PATH during installation).
 
 ### Cloning the Repository
 
-To get the latest version of AESCrypt Argon 6.0AK, you can clone the repository using Git:
+To get the latest version of **AESCrypt Argon 6.2AK**, clone the repository using Git:
 
 ```bash
 git clone https://github.com/victormeloasm/AESCrypt.git
@@ -69,90 +70,90 @@ git clone https://github.com/victormeloasm/AESCrypt.git
 
 ### Installing Dependencies
 
-Navigate to the directory where `requirements.txt` is located and install the necessary Python packages using pip:
+Navigate to the repository folder and install dependencies via `pip`:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-This will install all the dependencies required for AESCrypt Argon 6.0AK to function correctly.
-
 ## Download
 
-You can download the latest release of **AESCrypt Argon 6.0AK** from the GitHub repository. The release package includes the compiled executable and all necessary files.
+The latest release of **AESCrypt Argon 6.2AK** is available for both Windows and Linux.
 
-- **Release Page:** [AESCrypt Argon 6.0AK Release](https://github.com/victormeloasm/AESCrypt/releases/tag/ArgonAK)
-- **Download for Windows:** [AESCrypt Windows v6.0AK](https://github.com/victormeloasm/AESCrypt/releases/download/ArgonAK/AEScrypt_Windows_v6.0AKB.zip)
-- **Download for Linux:** [AESCrypt Linux v6.0AK](https://github.com/victormeloasm/AESCrypt/releases/download/ArgonAK/AEScrypt_Linux_v6.0AK.zip)
+- **Release Page**: [AESCrypt Argon 6.2AK Release](https://github.com/victormeloasm/AESCrypt/releases/tag/ArgonF)
+- **Windows Download**: [AESCrypt Windows v6.2AK](https://github.com/victormeloasm/AESCrypt/releases/download/ArgonF/AEScrypt_Windows_v6.2AK.zip)
+- **Linux Download**: [AESCrypt Linux v6.2AK](https://github.com/victormeloasm/AESCrypt/releases/download/ArgonF/AEScrypt_Linux_v6.2AK.zip)
 
 ## Usage
 
 ### Launching the Application
 
-To start AESCrypt Argon 6.0AK:
-
-- **If Using Python**: Execute the script directly:
+- **If Using Python**: Run the script by executing:
   ```bash
   python AESCrypt.py
   ```
 
-- **If Compiled to Executable**: Double-click the `.exe` file generated by PyInstaller.
+- **If Compiled to Executable**: Double-click on the `.exe` file to launch AESCrypt.
 
 ### User Interface Overview
 
-The AESCrypt Argon 6.0AK interface is designed to be intuitive and user-friendly:
+The updated AESCrypt 6.2AK interface features the following:
 
-- **File/Folder Path**: A text field and browse button to select files or folders for encryption or decryption.
-- **Password Entry**: A field to input or generate a strong password.
-- **Action Buttons**: Buttons to initiate encryption, decryption, or password generation.
+- **File/Folder Selection**: Use "Browse File" or "Browse Folder" to choose the files/folders you wish to encrypt or decrypt.
+- **Password Input**: Enter a secure password or use "Generate Password" for a random, strong password.
+- **Action Buttons**: Simple buttons for encryption, decryption, and password management.
 
 ### Encrypting Files
 
-1. **Select a File**: Click on "Browse File" to choose the file you want to encrypt.
-2. **Enter Password**: Type a secure password into the password field or click "Generate Password" to create a strong one.
-3. **Encrypt**: Click the "Encrypt" button. The encrypted file will be saved with a `.aes` extension in the same location as the original file.
+1. **Select the File**: Choose the file to encrypt via "Browse File."
+2. **Enter Password**: Either type a password or use "Generate Password."
+3. **Encrypt**: Press "Encrypt" to save the encrypted version in the same directory.
 
 ### Decrypting Files
 
-1. **Select an Encrypted File**: Click on "Browse File" to choose the `.aes` file you wish to decrypt.
-2. **Enter Password**: Provide the password used during the encryption process.
-3. **Decrypt**: Click the "Decrypt" button. The decrypted file will be saved with its original filename, replacing the `.aes` extension.
+1. **Select Encrypted File**: Choose the encrypted `.aes` file to decrypt.
+2. **Enter the Password**: Provide the original password used for encryption.
+3. **Decrypt**: Click "Decrypt" to restore the file to its original form.
 
 ### Encrypting Folders
 
-1. **Select a Folder**: Click on "Browse Folder" to choose the folder containing files to encrypt.
-2. **Enter Password**: Enter a password or generate a new one.
-3. **Encrypt**: Click "Encrypt" to start the encryption process. All files within the selected folder will be encrypted.
+1. **Select Folder**: Choose the folder containing files for batch encryption.
+2. **Enter Password**: Use an existing or generate a new password.
+3. **Encrypt**: Click "Encrypt" to encrypt all files inside the folder.
 
 ## Troubleshooting
 
 ### Common Issues
 
-- **File Not Found**: Verify the file or folder path is correct and that you have the necessary permissions to access it.
-- **Password Mismatch**: Ensure that the password you are using matches the one used during encryption.
+- **Incorrect Password**: If you see a password mismatch error, ensure you're entering the correct password.
+- **File Not Found**: Ensure the file path is correct and that your permissions are sufficient.
 
 ### Error Messages
 
-- **"File Integrity Check Failed"**: Indicates that the file might be corrupted or tampered with. Double-check the password and file integrity.
+- **"Integrity Check Failed"**: Verify file integrity and password. The file may have been tampered with.
 
 ## Security Considerations
 
-- **Password Management**: Always use strong, unique passwords for encryption. Avoid reusing passwords across different applications.
-- **Data Handling**: Make sure files are properly managed and backed up to prevent accidental loss or corruption.
-- **Environment**: Run the application in a secure environment and avoid using it on compromised systems.
+- **Password Safety**: Always create strong and unique passwords for encryption.
+- **Backup**: Keep your original unencrypted files in a safe backup.
+- **Environment**: Use AESCrypt only on secure, trusted systems to avoid compromises.
 
 ## Contributing
 
-Contributions to AESCrypt Argon 6.0AK are welcome! If you have improvements, bug fixes, or new features to suggest, please follow these steps:
+We welcome contributions! If you'd like to improve AESCrypt or fix bugs, here’s how to get involved:
 
-1. **Fork the Repository**: Create your own fork of the repository.
-2. **Create a Branch**: Work on your changes in a new branch.
-3. **Submit a Pull Request**: Share your changes with the community by submitting a pull request.
+1. **Fork the Repository**: Create your own fork on GitHub.
+2. **Create a Branch**: Develop your changes in a separate branch.
+3. **Submit a Pull Request**: Once you're happy with your changes, submit a pull request.
 
 ## License
 
-This project is licensed under the MIT License. For more information, please review the [LICENSE](LICENSE) file included in this repository.
+Licensed under the MIT License. Please see the [LICENSE](LICENSE) file for more details.
 
 ## Contact
 
-For any questions, issues, or support related to AESCrypt Argon 6.0AK, please reach out to us at [victormeloasm@gmail.com](mailto:victormeloasm@gmail.com).
+For any inquiries, issues, or support, please contact us at [victormeloasm@gmail.com](mailto:victormeloasm@gmail.com).
+
+---
+
+This README reflects the newest version of the software, including the **Anti-Keylogger** (AK) security features, enhanced capabilities, and updated download links. Let me know if you'd like further changes!
