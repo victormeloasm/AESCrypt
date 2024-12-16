@@ -1,11 +1,4 @@
+tk
 cryptography
 argon2-cffi
-tk
-hmac
-hashlib
-secrets
-ctypes
-subprocess
 string
-os
-random
