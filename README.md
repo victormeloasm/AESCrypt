@@ -153,7 +153,3 @@ Licensed under the MIT License. Please see the [LICENSE](LICENSE) file for more 
 ## Contact
 
 For any inquiries, issues, or support, please contact us at [victormeloasm@gmail.com](mailto:victormeloasm@gmail.com).
-
----
-
-This README reflects the newest version of the software, including the **Anti-Keylogger** (AK) security features, enhanced capabilities, and updated download links. Let me know if you'd like further changes!
