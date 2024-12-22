@@ -1,4 +1,2 @@
-tk
 cryptography
 argon2-cffi
-string
