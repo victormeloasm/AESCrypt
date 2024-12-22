@@ -3,6 +3,7 @@ from tkinter import filedialog, messagebox, ttk
 import os
 import secrets
 import hmac
+import string
 import threading
 import hashlib
 import ctypes
@@ -28,6 +29,118 @@ def secure_erase_memory(data):
             raise TypeError(f"Data must be a mutable object like bytearray or memoryview, but got {type(data)}.")
     except (BufferError, TypeError) as e:
         raise ValueError(f"Cannot securely erase memory: {str(e)}") from e
+    
+
+  # Função para descriptografar um arquivo com multithreading
+def decrypt_file(file_path, password_bytearray):
+    try:
+        sanitized_file_path = sanitize_filepath(file_path)
+        if not os.path.exists(sanitized_file_path):
+            messagebox.showerror("File Error", f"The file does not exist: {sanitized_file_path}")
+            return
+
+        # Ler os dados criptografados
+        with open(sanitized_file_path, 'rb') as f:
+            salt = f.read(32)
+            iv = f.read(16)
+            tag = f.read(16)
+            hmac_value = f.read(32)
+            encrypted_data = f.read()
+
+        # Derivar as chaves de criptografia
+        aes_key, hmac_key, _ = derive_key(password_bytearray, salt)
+
+        # Verificar HMAC (integridade dos dados)
+        hmac_input = salt + iv + tag + encrypted_data
+        calculated_hmac = hmac.new(hmac_key, hmac_input, hashlib.sha256).digest()
+
+        if hmac_value != calculated_hmac:
+            messagebox.showerror("Error", "HMAC check failed. The file might be tampered with.")
+            return
+
+        # Função para descriptografar um bloco de dados
+        def decrypt_block(start, end):
+            chunk = encrypted_data[start:end]
+            cipher = Cipher(algorithms.AES(aes_key), modes.GCM(iv, tag))
+            decryptor = cipher.decryptor()
+            return decryptor.update(chunk)
+
+        # Número de threads a ser usado
+        block_size = 1048576  # Tamanho do bloco para processamento por thread
+        num_blocks = len(encrypted_data) // block_size + (1 if len(encrypted_data) % block_size != 0 else 0)
+        
+        threads = []
+        decrypted_chunks = [None] * num_blocks
+
+        # Função para processar a descriptografia de cada bloco em uma thread
+        def thread_worker(block_index, start, end):
+            decrypted_chunks[block_index] = decrypt_block(start, end)
+
+        # Criar as threads
+        for i in range(num_blocks):
+            start = i * block_size
+            end = min((i + 1) * block_size, len(encrypted_data))
+            thread = threading.Thread(target=thread_worker, args=(i, start, end))
+            threads.append(thread)
+            thread.start()
+
+        # Esperar as threads terminarem
+        for thread in threads:
+            thread.join()
+
+        # Combinar os blocos descriptografados
+        decrypted_data = b''.join(decrypted_chunks)
+
+        # Remover padding
+        unpadded_data = decrypted_data.rstrip(b'\x00')
+
+        # Salvar o arquivo descriptografado
+        decrypted_file_path = sanitized_file_path.replace(".aes", "")
+        with open(decrypted_file_path, 'wb') as f:
+            f.write(unpadded_data)
+
+        secure_erase_memory(bytearray(encrypted_data))
+        secure_erase_memory(bytearray(decrypted_data))
+
+        messagebox.showinfo("Success", f"File decrypted successfully: {decrypted_file_path}")
+
+    except Exception as e:
+        messagebox.showerror("Error", f"An error occurred during decryption: {str(e)}")
+
+
+# Função para criptografar uma pasta (iterando sobre os arquivos)
+def encrypt_folder(folder_path, password_bytearray):
+    try:
+        sanitized_folder_path = sanitize_filepath(folder_path)
+        if not os.path.isdir(sanitized_folder_path):
+            messagebox.showerror("Folder Error", f"The folder does not exist: {sanitized_folder_path}")
+            return
+        
+        # Função para criptografar cada arquivo
+        def encrypt_file_worker(file_path):
+            try:
+                encrypt_file(file_path, password_bytearray)
+            except Exception as e:
+                messagebox.showerror("Error", f"Error encrypting file {file_path}: {str(e)}")
+
+        # Cria uma thread para cada arquivo
+        threads = []
+        for root, dirs, files in os.walk(sanitized_folder_path):
+            for file_name in files:
+                file_path = os.path.join(root, file_name)
+                if not file_name.endswith(".aes"):  # Evita reprocessar arquivos já criptografados
+                    thread = threading.Thread(target=encrypt_file_worker, args=(file_path,))
+                    threads.append(thread)
+                    thread.start()
+
+        # Aguarda todas as threads terminarem
+        for thread in threads:
+            thread.join()
+
+        messagebox.showinfo("Success", f"Folder encrypted successfully: {sanitized_folder_path}")
+    
+    except Exception as e:
+        messagebox.showerror("Error", f"An error occurred during folder encryption: {str(e)}")
 
 # Função para criptografar um arquivo grande com multithreading
 def encrypt_large_file(file_path, password_bytearray, block_size=1048576):
@@ -78,6 +191,8 @@ def encrypt_large_file(file_path, password_bytearray, block_size=1048576):
         )
         encryption_thread.start()
 
+        encryption_thread.join()
+
     except Exception as e:
         messagebox.showerror("Error", f"An error occurred: {str(e)}")
 
@@ -127,50 +242,6 @@ def encrypt_file(file_path, password_bytearray):
 
     except Exception as e:
         messagebox.showerror("Error", f"An error occurred during encryption: {str(e)}")
-
-        # Função para descriptografar arquivos pequenos
-def decrypt_file(file_path, password_bytearray):
-    try:
-        sanitized_file_path = sanitize_filepath(file_path)
-        if not os.path.exists(sanitized_file_path):
-            messagebox.showerror("File Error", f"The file does not exist: {sanitized_file_path}")
-            return
-
-        # Lê o arquivo criptografado
-        with open(sanitized_file_path, 'rb') as f:
-            salt = f.read(32)  # Lê o salt
-            iv = f.read(16)    # Lê o IV
-            tag = f.read(16)   # Lê o tag
-            hmac_value = f.read(32)  # Lê o HMAC
-            encrypted_data = f.read()  # Lê os dados criptografados
-
-        aes_key, hmac_key, _ = derive_key(password_bytearray, salt)
-        secure_erase_memory(password_bytearray)
-
-        # Verifica o HMAC
-        hmac_input = salt + iv + tag + encrypted_data
-        calculated_hmac = hmac.new(hmac_key, hmac_input, hashlib.sha256).digest()
-        if hmac_value != calculated_hmac:
-            messagebox.showerror("Error", "HMAC verification failed. The file may be corrupted or the wrong password was used.")
-            return
-
-        # Descriptografa os dados
-        cipher = Cipher(algorithms.AES(aes_key), modes.GCM(iv, tag))
-        decryptor = cipher.decryptor()
-        decrypted_data = decryptor.update(encrypted_data) + decryptor.finalize()
-
-        # Grava o arquivo descriptografado
-        decrypted_file_path = sanitized_file_path.replace('.aes', '')
-        with open(decrypted_file_path, 'wb') as f:
-            f.write(decrypted_data)
-
-        secure_erase_memory(bytearray(encrypted_data))
-        secure_erase_memory(bytearray(decrypted_data))
-
-        messagebox.showinfo("Success", f"File decrypted successfully: {decrypted_file_path}")
-
-    except Exception as e:
-        messagebox.showerror("Error", f"An error occurred during decryption: {str(e)}")
 
 # Função para deletar o arquivo de forma segura
 def secure_delete(file_path):
@@ -253,6 +324,7 @@ def perform_action(action, password_entry, file_entry):
                     messagebox.showerror("Action Error", "Invalid action. Use 'encrypt' or 'decrypt'.")
     except Exception as e:
         messagebox.showerror("Error", str(e))
+
 
 
 # Função para aplicar o tema escuro
@@ -353,14 +425,14 @@ def browse_file():
 
 # GUI principal
 root = tk.Tk()
-root.title("AESCrypt Argon 6.2AK")  # Nome atualizado
+root.title("AESCrypt Argon 6.5AK")  # Nome atualizado
 root.geometry("655x350")
 root.resizable(False, False)
 
 set_dark_theme()  # Aplica o tema escuro
 
 # Título principal
-title_label = ttk.Label(root, text="AESCrypt Argon 6.2AK", font=('Helvetica', 16))
+title_label = ttk.Label(root, text="AESCrypt Argon 6.5AK", font=('Helvetica', 16))
 title_label.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
 
 # Instruções para o usuário
