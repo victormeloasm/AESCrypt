@@ -1,6 +1,6 @@
-# AESCrypt Argon 6.2AK (Anti-Keylogger)
+# AESCrypt Argon 6.5AK (Anti-Keylogger)
 
-**AESCrypt Argon 6.2AK** is an advanced encryption tool designed for secure file and folder encryption and decryption. This version enhances security with the **AK (Anti-Keylogger)** feature, along with additional improvements and updates to existing methods, offering even more robust protection for your sensitive data. By incorporating the latest in password hashing with Argon2 and AES-256 for encryption, AESCrypt Argon 6.2AK is the ultimate tool for those who prioritize privacy and security in their digital lives.
+**AESCrypt Argon 6.5AK** is an advanced encryption tool designed for secure file and folder encryption and decryption. This version enhances security with the **AK (Anti-Keylogger)** feature, along with additional improvements and updates to existing methods, offering even more robust protection for your sensitive data. By incorporating the latest in password hashing with Argon2 and AES-256 for encryption, AESCrypt Argon 6.5AK is the ultimate tool for those who prioritize privacy and security in their digital lives.
 
 ![Screenshot](captuu.png)
 
@@ -31,7 +31,7 @@
 
 ## Overview
 
-**AESCrypt Argon 6.2AK** is a robust tool for file and folder encryption, utilizing the cutting-edge **Argon2 algorithm** for password hashing alongside **AES-256 encryption** to keep your data safe. This release introduces **AK (Anti-Keylogger)** protection, ensuring that your sensitive input remains secure from keyloggers while using the application. It’s designed for both professionals and casual users who require an easy-to-use, highly secure, and effective encryption tool.
+**AESCrypt Argon 6.5AK** is a robust tool for file and folder encryption, utilizing the cutting-edge **Argon2 algorithm** for password hashing alongside **AES-256 encryption** to keep your data safe. This release introduces **AK (Anti-Keylogger)** protection, ensuring that your sensitive input remains secure from keyloggers while using the application. It also brings enhanced performance through **multithreading support** and is optimized for handling **large files** without compromising security or speed. It’s designed for both professionals and casual users who require an easy-to-use, highly secure, and efficient encryption tool.
 
 ## Features
 
@@ -53,6 +53,8 @@
   - Memory zeroing to prevent leakage of sensitive data.
   - **AK (Anti-Keylogger)**: Blocks keyloggers from intercepting user keystrokes during encryption and decryption processes.
 - **Improved User Interface**: More responsive, with tooltips and a better layout for faster workflows.
+- **Multithreading Support**: Speeds up encryption and decryption processes by utilizing multiple CPU cores, making it faster and more efficient, especially for batch processing and large files.
+- **Large File Compatibility**: Optimized for handling large files seamlessly, allowing you to encrypt and decrypt files of significant size without performance degradation.
 
 ## Installation
 
@@ -62,7 +64,7 @@ Ensure Python is installed on your system. You can download Python from [python.
 
 ### Cloning the Repository
 
-To get the latest version of **AESCrypt Argon 6.2AK**, clone the repository using Git:
+To get the latest version of **AESCrypt Argon 6.5AK**, clone the repository using Git:
 
 ```bash
 git clone https://github.com/victormeloasm/AESCrypt.git
@@ -78,11 +80,11 @@ pip install -r requirements.txt
 
 ## Download
 
-The latest release of **AESCrypt Argon 6.2AK** is available for both Windows and Linux.
+The latest release of **AESCrypt Argon 6.5AK** is available for both Windows and Linux.
 
-- **Release Page**: [AESCrypt Argon 6.2AK Release](https://github.com/victormeloasm/AESCrypt/releases/tag/ArgonF)
-- **Windows Download**: [AESCrypt Windows v6.2AK](https://github.com/victormeloasm/AESCrypt/releases/download/ArgonF/AEScrypt_Windows_v6.2AK.zip)
-- **Linux Download**: [AESCrypt Linux v6.2AK](https://github.com/victormeloasm/AESCrypt/releases/download/ArgonF/AEScrypt_Linux_v6.2AK.zip)
+- **Release Page**: [AESCrypt Argon 6.5AK Release](https://github.com/victormeloasm/AESCrypt/releases/tag/ArgonZ)
+- **Windows Download**: [AESCrypt Windows v6.5AK](https://github.com/victormeloasm/AESCrypt/releases/download/ArgonZ/AEScrypt_Windows_v6.5AK.zip)
+- **Linux Download**: [AESCrypt Linux v6.5AK](https://github.com/victormeloasm/AESCrypt/releases/download/ArgonZ/AEScrypt_Linux_v6.5AK.zip)
 
 ## Usage
 
@@ -97,7 +99,7 @@ The latest release of **AESCrypt Argon 6.2AK** is available for both Windows and
 
 ### User Interface Overview
 
-The updated AESCrypt 6.2AK interface features the following:
+The updated AESCrypt 6.5AK interface features the following:
 
 - **File/Folder Selection**: Use "Browse File" or "Browse Folder" to choose the files/folders you wish to encrypt or decrypt.
 - **Password Input**: Enter a secure password or use "Generate Password" for a random, strong password.
@@ -152,4 +154,4 @@ Licensed under the MIT License. Please see the [LICENSE](LICENSE) file for more 
 
 ## Contact
 
-For any inquiries, issues, or support, please contact us at [victormeloasm@gmail.com](mailto:victormeloasm@gmail.com).
+For any inquiries, issues, or support, please contact us at [victormeloasm@gmail.com](mailto:victormeloasm@gmail.com)
