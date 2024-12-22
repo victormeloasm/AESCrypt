@@ -2,7 +2,7 @@
 
 **AESCrypt Argon 6.5AK** is an advanced encryption tool designed for secure file and folder encryption and decryption. This version enhances security with the **AK (Anti-Keylogger)** feature, along with additional improvements and updates to existing methods, offering even more robust protection for your sensitive data. By incorporating the latest in password hashing with Argon2 and AES-256 for encryption, AESCrypt Argon 6.5AK is the ultimate tool for those who prioritize privacy and security in their digital lives.
 
-![Screenshot](captuu.png)
+![Screenshot](captured.png)
 
 [Visit the AESCrypt Website](https://aescrypt-argon.netlify.app/)
 
