@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AESCrypt Argon 6.5AK - Secure file encryption and decryption tool with AES-256 GCM, Argon2 password hashing, Anti-Keylogger protection, and more advanced security features.">
-    <meta name="keywords" content="AESCrypt, encryption, AES-256 GCM, Argon2, secure, file encryption, decryption, Anti-Keylogger, file security, encryption tool, password protection">
+    <meta name="description" content="AESCrypt Argon 7.0AK REV - Advanced file encryption and decryption tool with AES-256 GCM, per-block encryption, Anti-Keylogger, multithreading, and more.">
+    <meta name="keywords" content="AESCrypt, encryption, AES-256 GCM, Argon2, secure, file encryption, Anti-Keylogger, multithreading, file security, password protection">
     <meta name="author" content="AESCrypt Development Team">
-    <title>AESCrypt Argon 6.5AK</title>
-    <link rel="icon" href="Aescrypt.png" type="image/png"> <!-- Logo na aba do navegador -->
+    <title>AESCrypt Argon 7.0AK REV</title>
+    <link rel="icon" href="Aescrypt.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
@@ -34,8 +34,8 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>AESCrypt Argon 6.5AK</h1>
-                <p>Secure your data with AES-256 GCM encryption, Argon2id password hashing, and Anti-Keylogger protection. Enhanced security features now available!</p>
+                <h1>AESCrypt Argon 7.0AK REV</h1>
+                <p>Experience next-level security with per-block encryption, Anti-Keylogger protection, multithreading, and optimized performance for large files.</p>
                 <a href="getstarted.html" class="cta-button">Get Started</a>
             </div>
         </div>
@@ -48,53 +48,48 @@
             <div class="feature-grid">
                 <div class="feature-item">
                     <i class="feature-icon">🔒</i>
-                    <h3>Strong Encryption</h3>
-                    <p>Now with AES-256 GCM encryption to secure your files, providing not only confidentiality but also authenticity and integrity for your data.</p>
+                    <h3>Per-Block Encryption</h3>
+                    <p>Each 1MB block is encrypted with a unique IV and tag, ensuring unmatched security and integrity.</p>
                 </div>
                 <div class="feature-item">
                     <i class="feature-icon">⚙️</i>
-                    <h3>Simple Interface</h3>
-                    <p>Enjoy a user-friendly GUI that ensures an efficient, hassle-free encryption and decryption process.</p>
-                </div>
-                <div class="feature-item">
-                    <i class="feature-icon">🌐</i>
-                    <h3>Cross-Platform</h3>
-                    <p>Works seamlessly across Windows and Linux systems, allowing full flexibility on different platforms.</p>
+                    <h3>Multithreading</h3>
+                    <p>Utilizes multiple CPU cores for fast encryption and decryption, especially for large files.</p>
                 </div>
                 <div class="feature-item">
                     <i class="feature-icon">🛡️</i>
-                    <h3>Metadata Protection</h3>
-                    <p>Your metadata is fully encrypted, keeping it safe from unwanted access and ensuring complete privacy for your files.</p>
-                </div>
-                <div class="feature-item">
-                    <i class="feature-icon">📦</i>
-                    <h3>Random Byte Padding</h3>
-                    <p>Encrypt files with random byte padding, increasing security by preventing file size leakage through encryption patterns.</p>
-                </div>
-                <div class="feature-item">
-                    <i class="feature-icon">🔑</i>
-                    <h3>Password Generation</h3>
-                    <p>Easily generate random, strong passwords for encryption, ensuring that your encryption keys are secure from the start.</p>
-                </div>
-                <div class="feature-item">
-                    <i class="feature-icon">🗑️</i>
-                    <h3>Secure File Deletion</h3>
-                    <p>Files are overwritten with random data before deletion, preventing unauthorized recovery of sensitive files.</p>
-                </div>
-                <div class="feature-item">
-                    <i class="feature-icon">⚡</i>
-                    <h3>Improved Security Features</h3>
-                    <p>Includes advanced security improvements such as higher Argon2id iterations, protection from keyloggers, memory data cleansing, and improved random number generation for secure encryption.</p>
+                    <h3>Anti-Keylogger Protection</h3>
+                    <p>Protect your passwords with a polymorphic virtual keyboard, preventing keyloggers from capturing sensitive data.</p>
                 </div>
                 <div class="feature-item">
                     <i class="feature-icon">💻</i>
-                    <h3>Multithreading Support</h3>
-                    <p>Encrypt and decrypt large files efficiently with the added benefit of multithreading, speeding up the process significantly, especially for large datasets.</p>
+                    <h3>Large File Support</h3>
+                    <p>Seamlessly encrypt and decrypt files of any size with optimized algorithms.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="feature-icon">🔑</i>
+                    <h3>Password Management</h3>
+                    <p>Generate secure random passwords with built-in tools for enhanced protection.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="feature-icon">🗑️</i>
+                    <h3>Secure Deletion</h3>
+                    <p>Ensure deleted files are unrecoverable by overwriting them multiple times with random data.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="feature-icon">🌐</i>
+                    <h3>Cross-Platform Compatibility</h3>
+                    <p>Available for both Windows and Linux, providing flexibility for all users.</p>
                 </div>
                 <div class="feature-item">
                     <i class="feature-icon">📂</i>
-                    <h3>Large File Support</h3>
-                    <p>Now supporting encryption and decryption of large files without performance degradation, even for extremely large datasets, using optimized algorithms and memory management techniques.</p>
+                    <h3>Folder Encryption</h3>
+                    <p>Encrypt entire folders easily, securing multiple files in one operation.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="feature-icon">⚡</i>
+                    <h3>HMAC Integrity Checks</h3>
+                    <p>Ensure the authenticity and integrity of your encrypted files with advanced HMAC validation.</p>
                 </div>
             </div>
         </div>
@@ -103,12 +98,12 @@
     <!-- Download Section -->
     <section class="download">
         <div class="container">
-            <h2>Download AESCrypt Argon 6.5AK</h2>
-            <p>Get the latest release of AESCrypt Argon 6.5AK for your platform:</p>
+            <h2>Download AESCrypt Argon 7.0AK REV</h2>
+            <p>Get the latest version of AESCrypt Argon 7.0AK REV for your platform:</p>
             <ul>
-                <li><a href="https://github.com/victormeloasm/AESCrypt/releases/tag/ArgonZ">Release Notes</a></li>
-                <li><a href="https://github.com/victormeloasm/AESCrypt/releases/download/ArgonZ/AEScrypt_Windows_v6.5AK.zip">Download for Windows</a></li>
-                <li><a href="https://github.com/victormeloasm/AESCrypt/releases/download/ArgonZ/AEScrypt_Linux_v6.5AK.zip">Download for Linux</a></li>
+                <li><a href="https://github.com/victormeloasm/AESCrypt/releases/tag/ArgonREV">Release Notes</a></li>
+                <li><a href="https://github.com/victormeloasm/AESCrypt/releases/download/ArgonREV/AEScrypt_Windows_v7.0AK.zip">Download for Windows</a></li>
+                <li><a href="https://github.com/victormeloasm/AESCrypt/releases/download/ArgonREV/AEScrypt_Linux_v7.0AK.zip">Download for Linux</a></li>
             </ul>
         </div>
     </section>
@@ -116,7 +111,7 @@
     <!-- Footer Section -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 AESCrypt Argon 6.5AK. All rights reserved.</p>
+            <p>&copy; 2025 AESCrypt Argon 7.0AK REV. All rights reserved.</p>
         </div>
     </footer>
 
