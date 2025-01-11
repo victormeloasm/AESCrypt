@@ -1,3 +1,0 @@
-AEScrypt_Linux_v6.2AK: 82fa5838418d36aabdc36b0454e52affaf82e39d19911c497b5fd8d9a291c244
-
-AEScrypt_Windows_v6.2AK: 42f87e828668f95469a039cc463b4bff5010a5e06b1bda2d3fc7b35a5fe5b7d8
