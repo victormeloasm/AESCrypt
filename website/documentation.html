@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documentation - AESCrypt Argon 6.5AK</title>
+    <title>Documentation - AESCrypt Argon 7.0AK REV</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="Aescrypt.png">
     <style>
@@ -40,7 +40,7 @@
             background-color: #45a049;
         }
 
-        /* New section styles */
+        /* Section styles */
         h2 {
             font-size: 1.5rem;
             margin-top: 40px;
@@ -62,7 +62,7 @@
             font-size: 1rem;
         }
 
-        /* Improved list layout */
+        /* Container layout */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -73,7 +73,7 @@
 <body>
     <header>
         <div class="container">
-            <h1>AESCrypt Argon 6.5AK Documentation</h1>
+            <h1>AESCrypt Argon 7.0AK REV Documentation</h1>
             <div class="home-button">
                 <a href="index.html" class="cta-button">Home</a>
             </div>
@@ -97,13 +97,10 @@
         <section id="overview">
             <h2>Overview</h2>
             <p>
-                AESCrypt Argon 6.5AK is the latest and most powerful version of AESCrypt. This tool combines AES-256-GCM encryption for maximum security with the advanced Argon2id hashing algorithm for robust password protection. The software ensures that your sensitive data is protected by the best security practices available today.
+                AESCrypt Argon 7.0AK REV represents a significant advancement in encryption technology, combining AES-256-GCM encryption with Argon2id password hashing and cutting-edge features like Anti-Keylogger protection. The REV edition introduces optimized block-based encryption, improved performance for large files, and enhanced user interface elements for a seamless experience.
             </p>
             <p>
-                This tool also offers additional security measures, including the secure deletion of files, encryption of metadata, and batch encryption capabilities. With an easy-to-use interface available for Windows and Linux systems, AESCrypt Argon 6.5AK is designed to provide a seamless, cross-platform encryption experience for all types of users.
-            </p>
-            <p>
-                The program leverages <strong>multithreading</strong> to speed up the encryption and decryption processes, especially when dealing with large files. This ensures that your encryption tasks are completed faster and more efficiently, even with massive datasets.
+                The tool ensures the highest level of security for sensitive data while offering a user-friendly interface compatible with Windows and Linux. It supports large files, batch processing, and multithreading for faster and more efficient encryption and decryption tasks.
             </p>
             <img src="captured.png" alt="AESCrypt Screenshot">
         </section>
@@ -111,89 +108,80 @@
         <section id="features">
             <h2>Features</h2>
             <ul>
-                <li><strong>AES-256-GCM Encryption:</strong> Industry-standard encryption algorithm, providing top-tier security for your files.</li>
-                <li><strong>Password Hashing with Argon2id:</strong> Defends against brute force and rainbow table attacks, making password-based encryption more secure.</li>
-                <li><strong>Secure File Deletion:</strong> Overwrites files multiple times to ensure no data is recoverable, enhancing security when deleting sensitive information.</li>
-                <li><strong>Metadata Encryption:</strong> Encrypts not only the contents of your files, but also protects metadata such as file names and file sizes.</li>
-                <li><strong>Batch Encryption:</strong> Encrypt multiple files and entire directories with a single click, saving time for bulk encryption tasks.</li>
-                <li><strong>Large File Support:</strong> AESCrypt Argon 6.5AK is optimized to handle large files without performance issues. Encryption and decryption speeds remain consistent, even for files that are several gigabytes in size.</li>
-                <li><strong>Cross-Platform Compatibility:</strong> Available for Windows, Linux, and other platforms, ensuring broad accessibility.</li>
-                <li><strong>Random Password Generation:</strong> Generates strong and random passwords to prevent weak passwords from compromising your security.</li>
-                <li><strong>Anti-Keylogger Protection:</strong> In-built defense mechanisms prevent malware from capturing your keystrokes during encryption or decryption processes.</li>
+                <li><strong>AES-256-GCM Encryption:</strong> Ensures data confidentiality, authenticity, and integrity.</li>
+                <li><strong>Argon2id Password Hashing:</strong> Protects passwords against brute force and side-channel attacks.</li>
+                <li><strong>Secure File Deletion:</strong> Overwrites files with random data to prevent recovery.</li>
+                <li><strong>Metadata Encryption:</strong> Encrypts metadata to prevent leakage of sensitive information.</li>
+                <li><strong>Batch Processing:</strong> Efficiently encrypt or decrypt multiple files or folders simultaneously.</li>
+                <li><strong>Large File Support:</strong> Optimized for handling files larger than 1GB with consistent performance.</li>
+                <li><strong>Cross-Platform Compatibility:</strong> Available for both Windows and Linux.</li>
+                <li><strong>Anti-Keylogger Protection:</strong> Prevents malicious software from capturing keystrokes during encryption or decryption.</li>
+                <li><strong>Password Generator:</strong> Generates secure, random passwords for robust encryption.</li>
+                <li><strong>Multithreading:</strong> Accelerates encryption and decryption using multi-core processors.</li>
+                <li><strong>Random Byte Padding:</strong> Adds random data to prevent file size leakage.</li>
+                <li><strong>Enhanced GUI:</strong> Features a modern, dark-themed interface for improved usability.</li>
             </ul>
         </section>
 
         <section id="installation">
             <h2>Installation</h2>
-            <p>Follow these steps to install AESCrypt Argon 6.5AK on your system:</p>
+            <p>Follow these steps to install AESCrypt Argon 7.0AK REV:</p>
 
             <h3>Prerequisites</h3>
-            <p>Ensure that Python is installed on your system. If not, you can download it from <a href="https://www.python.org/downloads/" target="_blank">python.org</a>.</p>
+            <p>Ensure Python is installed. Download it from <a href="https://www.python.org/downloads/" target="_blank">python.org</a>.</p>
 
             <h3>Cloning the Repository</h3>
-            <p>To install the tool, clone the official repository from GitHub:</p>
             <pre><code>git clone https://github.com/victormeloasm/AESCrypt.git</code></pre>
 
             <h3>Installing Dependencies</h3>
-            <p>After cloning the repository, install the required dependencies by running:</p>
             <pre><code>pip install -r requirements.txt</code></pre>
 
-            <h3>Compiling Executable (Optional)</h3>
-            <p>If you want to create a standalone executable for your operating system, you can use PyInstaller:</p>
+            <h3>Compiling Executables</h3>
             <pre><code>pyinstaller --onefile aescrypt.py</code></pre>
-
-            <h3>Virtual Environment (Optional)</h3>
-            <p>It is highly recommended to install and activate a virtual environment to manage dependencies more effectively. To create a virtual environment, run:</p>
-            <pre><code>python -m venv aescryptenv</code></pre>
-            <p>Then activate the environment:</p>
-            <pre><code>source aescryptenv/bin/activate  # Linux/macOS</code></pre>
-            <pre><code>aescryptenv\Scripts\activate  # Windows</code></pre>
         </section>
 
         <section id="usage">
             <h2>Usage</h2>
-            <p>Here's how you can encrypt and decrypt your files using AESCrypt Argon 6.5AK:</p>
-
             <h3>Encrypting Files</h3>
             <ol>
-                <li>Click "Browse File" to select the file you want to encrypt.</li>
-                <li>Enter a secure password for encryption, or use the password generator to create a random password.</li>
-                <li>Click "Encrypt" to save the encrypted file to your desired location.</li>
+                <li>Select a file using the "Browse File" button.</li>
+                <li>Enter a password or generate one using the built-in generator.</li>
+                <li>Click "Encrypt" to create an encrypted version of the file.</li>
             </ol>
 
             <h3>Decrypting Files</h3>
             <ol>
                 <li>Choose the encrypted file you want to decrypt.</li>
-                <li>Enter the password that was used to encrypt the file.</li>
+                <li>Enter the correct password.</li>
                 <li>Click "Decrypt" to restore the original file.</li>
             </ol>
 
             <h3>Batch Encryption</h3>
-            <p>With AESCrypt Argon 6.5AK, you can encrypt multiple files or entire directories at once. This feature makes encrypting large sets of files simple and fast.</p>
+            <p>Encrypt multiple files or an entire folder in one operation, saving time and effort.</p>
 
             <h3>Handling Large Files</h3>
-            <p>For users working with large files, AESCrypt Argon 6.5AK is optimized to handle them efficiently, maintaining high performance even when dealing with files of several gigabytes.</p>
+            <p>AESCrypt Argon 7.0AK REV efficiently handles large files by processing them in blocks, ensuring consistent performance without memory issues.</p>
         </section>
 
         <section id="security">
             <h2>Security Considerations</h2>
             <ul>
-                <li><strong>Use Strong Passwords:</strong> Always choose strong, unique passwords for encrypting files. Avoid using easily guessed passwords.</li>
-                <li><strong>File Integrity:</strong> The AES-256-GCM algorithm guarantees data integrity. If a file is tampered with, decryption will fail.</li>
-                <li><strong>Memory Handling:</strong> The tool ensures sensitive data is wiped from memory as soon as it is no longer required, preventing unwanted access.</li>
-                <li><strong>Protection Against Keyloggers:</strong> The software integrates anti-keylogging mechanisms to protect your password during encryption and decryption processes.</li>
+                <li>Use strong, unique passwords for each encryption task.</li>
+                <li>Verify the integrity of files using the built-in checksum feature.</li>
+                <li>Protect your system from malware to ensure secure operation.</li>
+                <li>Back up your encrypted files regularly to prevent data loss.</li>
             </ul>
         </section>
 
         <section id="license">
             <h2>License</h2>
-            <p>AESCrypt Argon 6.5AK is released under the MIT License, which allows free use, modification, and distribution with proper attribution. For more details, consult the LICENSE file in the project's repository.</p>
+            <p>AESCrypt Argon 7.0AK REV is licensed under the MIT License, permitting free use, modification, and distribution. See the LICENSE file in the repository for details.</p>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 AESCrypt Argon 6.5AK - All Rights Reserved.</p>
+            <p>&copy; 2025 AESCrypt Argon 7.0AK REV - All Rights Reserved.</p>
         </div>
     </footer>
 </body>
