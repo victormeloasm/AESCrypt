@@ -1,0 +1,3 @@
+AEScrypt_Linux_v7.0AK: d919285fd48e5243e1ff35bf972c901e6a4d307c4ba72cade5f97cbe1660c64a
+
+AEScrypt_Windows_v7.0AK: b5d297a9ea9f58fb7d7b7fff93d34cb29e0f8facae7def54b66286069eac194e
