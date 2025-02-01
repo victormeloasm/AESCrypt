@@ -25,6 +25,10 @@
                 <li><a href="#installation">Installation</a></li>
                 <li><a href="#usage">Usage</a></li>
                 <li><a href="#security">Security Considerations</a></li>
+                <li><a href="#advanced">Advanced Encryption Details</a></li>
+                <li><a href="#performance">Performance Optimization</a></li>
+                <li><a href="#troubleshooting">Troubleshooting</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#license">License</a></li>
             </ul>
         </div>
@@ -33,14 +37,8 @@
     <main class="container">
         <section id="overview">
             <h2>Overview</h2>
-            <p>
-                AESCrypt Argon 2025AK is an advanced encryption tool designed for individuals and organizations requiring high-level security. 
-                This version includes per-block encryption, optimized multithreading, secure deletion, and Anti-Keylogger protection.
-            </p>
-            <p>
-                The software encrypts files using AES-256-GCM and derives encryption keys using Argon2id, making brute-force attacks virtually impossible. 
-                With its optimized encryption engine, AESCrypt 2025AK provides efficient file protection while ensuring a seamless user experience.
-            </p>
+            <p>AESCrypt Argon 2025AK is an advanced encryption tool designed for individuals and organizations requiring high-level security. This version introduces significant improvements, including per-block encryption, optimized multithreading, secure deletion, and Anti-Keylogger protection.</p>
+            <p>The software encrypts files using AES-256-GCM and derives encryption keys using Argon2id, making brute-force attacks virtually impossible. With its optimized encryption engine, AESCrypt 2025AK provides efficient file protection while ensuring a seamless user experience.</p>
             <img src="screen.png" alt="AESCrypt Screenshot">
         </section>
 
@@ -49,53 +47,50 @@
             <ul>
                 <li><strong>AES-256-GCM Encryption:</strong> Ensures data confidentiality, authenticity, and integrity.</li>
                 <li><strong>Argon2id Password Hashing:</strong> Provides enhanced brute-force resistance.</li>
+                <li><strong>Per-Block IVs:</strong> Each block of 1MB is encrypted independently, preventing data tampering.</li>
                 <li><strong>Secure File Deletion:</strong> Overwrites files multiple times with random data to prevent recovery.</li>
                 <li><strong>Random Byte Padding:</strong> Prevents attackers from inferring original file size.</li>
                 <li><strong>Multithreading Support:</strong> Uses multiple CPU cores to accelerate encryption and decryption.</li>
                 <li><strong>Anti-Keylogger Virtual Keyboard:</strong> Prevents keyloggers from capturing sensitive information.</li>
+                <li><strong>HMAC Integrity Check:</strong> Ensures encrypted files have not been altered.</li>
                 <li><strong>Metadata Encryption:</strong> Protects filenames and file attributes.</li>
                 <li><strong>Cross-Platform Compatibility:</strong> Available for Windows and Linux.</li>
+                <li><strong>Automatic Password Generation:</strong> Generates strong random passwords for encryption.</li>
+                <li><strong>Batch Encryption:</strong> Encrypt multiple files and folders in one operation.</li>
+                <li><strong>Dark Mode Interface:</strong> Enhances readability and user experience.</li>
             </ul>
         </section>
 
-        <section id="installation">
-            <h2>Installation</h2>
-            <h3>Prerequisites</h3>
-            <p>Ensure Python is installed. Download from <a href="https://www.python.org/downloads/" target="_blank">python.org</a>.</p>
-            <h3>Cloning the Repository</h3>
-            <pre><code>git clone https://github.com/victormeloasm/AESCrypt.git</code></pre>
-            <h3>Installing Dependencies</h3>
-            <pre><code>pip install -r requirements.txt</code></pre>
-            <h3>Compiling Executables</h3>
-            <pre><code>pyinstaller --onefile aescrypt.py</code></pre>
-        </section>
-
-        <section id="usage">
-            <h2>Usage</h2>
-            <h3>Encrypting Files</h3>
+        <section id="advanced">
+            <h2>Advanced Encryption Details</h2>
+            <p>AESCrypt Argon 2025AK encrypts data at a block level, meaning each block of 1MB has its own unique IV and authentication tag. This approach prevents tampering with individual blocks and ensures file integrity.</p>
+            <p>The encryption process follows these steps:</p>
             <ol>
-                <li>Open AESCrypt 2025AK.</li>
-                <li>Select a file using the "Browse" button.</li>
-                <li>Enter a password or generate a random one.</li>
-                <li>Click "Encrypt" to secure your file.</li>
-            </ol>
-            
-            <h3>Decrypting Files</h3>
-            <ol>
-                <li>Open the encrypted file.</li>
-                <li>Enter the correct password.</li>
-                <li>Click "Decrypt" to restore the original file.</li>
+                <li>The user inputs a password, which is processed using Argon2id to derive a cryptographic key.</li>
+                <li>The file is read in 1MB blocks, with each block being encrypted independently.</li>
+                <li>Each block is assigned a unique IV, preventing replay attacks.</li>
+                <li>After encryption, an HMAC is applied to ensure the file remains unaltered.</li>
             </ol>
         </section>
 
-        <section id="security">
-            <h2>Security Considerations</h2>
+        <section id="performance">
+            <h2>Performance Optimization</h2>
+            <p>AESCrypt Argon 2025AK leverages multithreading to improve encryption and decryption speeds. For best performance:</p>
             <ul>
-                <li>Use strong, unique passwords for encryption.</li>
-                <li>Enable checksum verification to ensure file integrity.</li>
-                <li>Keep backups of encrypted files to prevent accidental data loss.</li>
-                <li>Some antivirus software may flag AESCrypt due to its cryptographic operations. This is a **false positive**.</li>
+                <li>Use a multi-core CPU for faster encryption operations.</li>
+                <li>Allocate sufficient RAM when working with large files.</li>
+                <li>Enable hardware acceleration for AES encryption.</li>
             </ul>
+        </section>
+
+        <section id="faq">
+            <h2>Frequently Asked Questions (FAQ)</h2>
+            <p><strong>Why does my antivirus flag AESCrypt?</strong></p>
+            <p>Some antivirus programs may flag encryption tools due to their similarity with ransomware. AESCrypt is completely safe.</p>
+            <p><strong>Can I recover my password if I forget it?</strong></p>
+            <p>No, there is no way to recover an encryption password. Always store it securely.</p>
+            <p><strong>What is the difference between AES-256-GCM and other encryption modes?</strong></p>
+            <p>GCM mode provides built-in authentication and is resistant to tampering, unlike CBC mode.</p>
         </section>
 
         <section id="license">
