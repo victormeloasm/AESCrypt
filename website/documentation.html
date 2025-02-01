@@ -3,77 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documentation - AESCrypt Argon 7.0AK REV</title>
+    <title>Documentation - AESCrypt Argon 2025AK</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="Aescrypt.png">
-    <style>
-        /* Style for navigation links */
-        .nav-links a {
-            color: black;
-            text-decoration: none;
-        }
-        .nav-links a:hover {
-            text-decoration: underline;
-        }
-
-        /* Center the image */
-        img {
-            display: block;
-            margin: 20px auto;
-        }
-
-        /* Style for Home button */
-        .home-button {
-            display: block;
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        .cta-button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .cta-button:hover {
-            background-color: #45a049;
-        }
-
-        /* Section styles */
-        h2 {
-            font-size: 1.5rem;
-            margin-top: 40px;
-            color: #333;
-        }
-        p {
-            color: #666;
-            font-size: 1rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        ul {
-            margin-left: 20px;
-            color: #555;
-        }
-
-        li {
-            font-size: 1rem;
-        }
-
-        /* Container layout */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 15px;
-        }
-    </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>AESCrypt Argon 7.0AK REV Documentation</h1>
+            <h1>AESCrypt Argon 2025AK Documentation</h1>
             <div class="home-button">
                 <a href="index.html" class="cta-button">Home</a>
             </div>
@@ -97,45 +34,38 @@
         <section id="overview">
             <h2>Overview</h2>
             <p>
-                AESCrypt Argon 7.0AK REV represents a significant advancement in encryption technology, combining AES-256-GCM encryption with Argon2id password hashing and cutting-edge features like Anti-Keylogger protection. The REV edition introduces optimized block-based encryption, improved performance for large files, and enhanced user interface elements for a seamless experience.
+                AESCrypt Argon 2025AK is an advanced encryption tool designed for individuals and organizations requiring high-level security. 
+                This version includes per-block encryption, optimized multithreading, secure deletion, and Anti-Keylogger protection.
             </p>
             <p>
-                The tool ensures the highest level of security for sensitive data while offering a user-friendly interface compatible with Windows and Linux. It supports large files, batch processing, and multithreading for faster and more efficient encryption and decryption tasks.
+                The software encrypts files using AES-256-GCM and derives encryption keys using Argon2id, making brute-force attacks virtually impossible. 
+                With its optimized encryption engine, AESCrypt 2025AK provides efficient file protection while ensuring a seamless user experience.
             </p>
-            <img src="captured.png" alt="AESCrypt Screenshot">
+            <img src="screen.png" alt="AESCrypt Screenshot">
         </section>
 
         <section id="features">
             <h2>Features</h2>
             <ul>
                 <li><strong>AES-256-GCM Encryption:</strong> Ensures data confidentiality, authenticity, and integrity.</li>
-                <li><strong>Argon2id Password Hashing:</strong> Protects passwords against brute force and side-channel attacks.</li>
-                <li><strong>Secure File Deletion:</strong> Overwrites files with random data to prevent recovery.</li>
-                <li><strong>Metadata Encryption:</strong> Encrypts metadata to prevent leakage of sensitive information.</li>
-                <li><strong>Batch Processing:</strong> Efficiently encrypt or decrypt multiple files or folders simultaneously.</li>
-                <li><strong>Large File Support:</strong> Optimized for handling files larger than 1GB with consistent performance.</li>
-                <li><strong>Cross-Platform Compatibility:</strong> Available for both Windows and Linux.</li>
-                <li><strong>Anti-Keylogger Protection:</strong> Prevents malicious software from capturing keystrokes during encryption or decryption.</li>
-                <li><strong>Password Generator:</strong> Generates secure, random passwords for robust encryption.</li>
-                <li><strong>Multithreading:</strong> Accelerates encryption and decryption using multi-core processors.</li>
-                <li><strong>Random Byte Padding:</strong> Adds random data to prevent file size leakage.</li>
-                <li><strong>Enhanced GUI:</strong> Features a modern, dark-themed interface for improved usability.</li>
+                <li><strong>Argon2id Password Hashing:</strong> Provides enhanced brute-force resistance.</li>
+                <li><strong>Secure File Deletion:</strong> Overwrites files multiple times with random data to prevent recovery.</li>
+                <li><strong>Random Byte Padding:</strong> Prevents attackers from inferring original file size.</li>
+                <li><strong>Multithreading Support:</strong> Uses multiple CPU cores to accelerate encryption and decryption.</li>
+                <li><strong>Anti-Keylogger Virtual Keyboard:</strong> Prevents keyloggers from capturing sensitive information.</li>
+                <li><strong>Metadata Encryption:</strong> Protects filenames and file attributes.</li>
+                <li><strong>Cross-Platform Compatibility:</strong> Available for Windows and Linux.</li>
             </ul>
         </section>
 
         <section id="installation">
             <h2>Installation</h2>
-            <p>Follow these steps to install AESCrypt Argon 7.0AK REV:</p>
-
             <h3>Prerequisites</h3>
-            <p>Ensure Python is installed. Download it from <a href="https://www.python.org/downloads/" target="_blank">python.org</a>.</p>
-
+            <p>Ensure Python is installed. Download from <a href="https://www.python.org/downloads/" target="_blank">python.org</a>.</p>
             <h3>Cloning the Repository</h3>
             <pre><code>git clone https://github.com/victormeloasm/AESCrypt.git</code></pre>
-
             <h3>Installing Dependencies</h3>
             <pre><code>pip install -r requirements.txt</code></pre>
-
             <h3>Compiling Executables</h3>
             <pre><code>pyinstaller --onefile aescrypt.py</code></pre>
         </section>
@@ -144,44 +74,39 @@
             <h2>Usage</h2>
             <h3>Encrypting Files</h3>
             <ol>
-                <li>Select a file using the "Browse File" button.</li>
-                <li>Enter a password or generate one using the built-in generator.</li>
-                <li>Click "Encrypt" to create an encrypted version of the file.</li>
+                <li>Open AESCrypt 2025AK.</li>
+                <li>Select a file using the "Browse" button.</li>
+                <li>Enter a password or generate a random one.</li>
+                <li>Click "Encrypt" to secure your file.</li>
             </ol>
-
+            
             <h3>Decrypting Files</h3>
             <ol>
-                <li>Choose the encrypted file you want to decrypt.</li>
+                <li>Open the encrypted file.</li>
                 <li>Enter the correct password.</li>
                 <li>Click "Decrypt" to restore the original file.</li>
             </ol>
-
-            <h3>Batch Encryption</h3>
-            <p>Encrypt multiple files or an entire folder in one operation, saving time and effort.</p>
-
-            <h3>Handling Large Files</h3>
-            <p>AESCrypt Argon 7.0AK REV efficiently handles large files by processing them in blocks, ensuring consistent performance without memory issues.</p>
         </section>
 
         <section id="security">
             <h2>Security Considerations</h2>
             <ul>
-                <li>Use strong, unique passwords for each encryption task.</li>
-                <li>Verify the integrity of files using the built-in checksum feature.</li>
-                <li>Protect your system from malware to ensure secure operation.</li>
-                <li>Back up your encrypted files regularly to prevent data loss.</li>
+                <li>Use strong, unique passwords for encryption.</li>
+                <li>Enable checksum verification to ensure file integrity.</li>
+                <li>Keep backups of encrypted files to prevent accidental data loss.</li>
+                <li>Some antivirus software may flag AESCrypt due to its cryptographic operations. This is a **false positive**.</li>
             </ul>
         </section>
 
         <section id="license">
             <h2>License</h2>
-            <p>AESCrypt Argon 7.0AK REV is licensed under the MIT License, permitting free use, modification, and distribution. See the LICENSE file in the repository for details.</p>
+            <p>AESCrypt Argon 2025AK is licensed under the MIT License, allowing free usage, modification, and distribution.</p>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 AESCrypt Argon 7.0AK REV - All Rights Reserved.</p>
+            <p>&copy; 2025 AESCrypt Argon 2025AK - All Rights Reserved.</p>
         </div>
     </footer>
 </body>
