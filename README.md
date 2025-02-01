@@ -8,9 +8,14 @@ With a focus on both **security** and **user experience**, AESCrypt 2025AK provi
 
 ⚠️ **Important Notice:** Due to the use of high-security encryption algorithms, **some antivirus software may flag AESCrypt 2025AK as a potential threat**, as its cryptographic behavior resembles that of ransomware. However, **AESCrypt is completely safe**, open-source, and does not contain any malicious code. If flagged, you may need to whitelist the software in your antivirus settings.
 
-![Screenshot](screen.png)
+![Screenshot](assets/screen.png)
 
 ---
+
+- `src/`: Main source code.
+- `assets/`: Images, icons, and other media files.
+- `website/`: Website-related files.
+
 
 ## 🚀 Why Choose AESCrypt 2025AK?
 
