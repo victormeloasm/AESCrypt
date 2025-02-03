@@ -19,18 +19,17 @@ With a focus on both **security** and **user experience**, AESCrypt 2025AK provi
 
 ## 🚀 Why Choose AESCrypt 2025AK?
 
-✔ **State-of-the-art AES-256 encryption with per-block IVs and authentication tags**
-✔ **Random padding implementation to disguise file sizes**
-✔ **Multithreaded processing for high-speed encryption and decryption**
-✔ **Advanced secure file deletion to prevent forensic recovery**
-✔ **Built-in virtual keyboard to protect against keyloggers**
-✔ **Dark mode UI for better user experience**
-✔ **Memory-safe implementations to eliminate key exposure in RAM**
-✔ **HMAC verification for full integrity checks**
-✔ **Works on all file types, including executables, archives, and media files**
-✔ **Compatible with Windows and Linux**
+- ✔ **State-of-the-art AES-256 encryption with per-block IVs and authentication tags**
+- ✔ **Random padding implementation to disguise file sizes**
+- ✔ **Multithreaded processing for high-speed encryption and decryption**
+- ✔ **Advanced secure file deletion to prevent forensic recovery**
+- ✔ **Built-in virtual keyboard to protect against keyloggers**
+- ✔ **Dark mode UI for better user experience**
+- ✔ **Memory-safe implementations to eliminate key exposure in RAM**
+- ✔ **HMAC verification for full integrity checks**
+- ✔ **Works on all file types, including executables, archives, and media files**
+- ✔ **Compatible with Windows and Linux**
 
----
 
 ## 📜 Table of Contents
 
